@@ -39,9 +39,14 @@ body {
 }
 
 .home {
-	font-size:1.5em;
-	color: #FF8;
+	font-size:1.6em;
+	color: #AFF;
 	font-variant: small-caps;
+	font-weight: bold;
+	text-shadow: 2px 2px #000000;
+}
+a.home:link,a.home.active:link, a.home:hover, a.home:visited {
+	color: #AFF;
 }
 
 h1 {
