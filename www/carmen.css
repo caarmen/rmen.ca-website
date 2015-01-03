@@ -38,6 +38,12 @@ body {
 	right: 15px;
 }
 
+.home {
+	font-size:1.5em;
+	color: #FF8;
+	font-variant: small-caps;
+}
+
 h1 {
 	color: #FF8;
 }
