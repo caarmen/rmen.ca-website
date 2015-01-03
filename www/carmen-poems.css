@@ -12,10 +12,10 @@ div.index a {
 }
 .poem:after, .index:before, .index:after {
 	display: block;
-	background: url('images/leaf2.png') repeat-x;
+	background: url('images/divider.png');
 	content: " ";
 	height: 74px;
-	width: 378px;
+	width: 384px;
 	margin-top: 32px;
 }
 .poem-number {
