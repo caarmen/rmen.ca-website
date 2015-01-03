@@ -1,0 +1,184 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO Drawer
+[
+	field SFVec3f size
+	field MFString texture
+	field SFVec3f position
+]
+"drawer.wrl#Drawer"
+
+
+PROTO Bed
+[
+	field SFVec3f pos 0 0 0
+	field SFVec3f bscale 1.0 1.0 1.0
+	field SFRotation brotation 0 0 0 0
+]
+{
+	Transform
+	{
+		translation IS pos
+		scale IS bscale
+		rotation IS brotation
+
+		children
+		[
+			DEF BedTexture Appearance
+			{
+				texture ImageTexture{ url "../textures/woodsm.gif" repeatS TRUE repeatT TRUE}
+				textureTransform TextureTransform { scale 7 5}
+				material Material{}
+			}
+			Transform
+			{
+				translation 1 -1 0
+				children
+				[
+					Shape
+					{
+						geometry Box { size 2 14 40}
+						appearance USE BedTexture
+					}
+				]
+			}
+			Transform
+			{
+				translation 27 -1 0
+				children
+				[
+					Shape
+					{
+						geometry Box {size 2 14 40 }
+						appearance USE BedTexture
+					}
+				]
+			}
+			Transform
+			{
+				translation 53 -1 0
+				children
+				[
+					Shape
+					{
+						geometry Box {size 2 14 40 }
+						appearance USE BedTexture
+					}
+				]
+			}
+			Transform
+			{
+				translation 77 -1 0
+				children
+				[
+					Shape
+					{
+						geometry Box {size 2 14 40 }
+						appearance USE BedTexture
+					}
+				]
+			}
+			Transform
+			{
+				translation 39 7 0
+				children
+				[
+					Shape
+					{
+						geometry Box {size 78 2 40 }
+						appearance USE BedTexture
+					}
+				]
+			}
+			Transform
+			{
+				translation 14 -1 0
+				children
+				[
+					Shape
+					{
+						geometry Box {size 24 1 40 }
+						appearance USE BedTexture
+					}
+				]
+			}
+			Transform
+			{
+				translation 40 -1 0
+				children
+				[
+					Shape
+					{
+						geometry Box {size 24 1 40 }
+						appearance USE BedTexture
+					}
+				]
+			}
+			Transform
+			{
+				translation 65 -1 0
+				children
+				[
+					Shape
+					{
+						geometry Box {size 24 1 40 }
+						appearance USE BedTexture
+					}
+				]
+			}
+			Drawer {size 24 6.5 40 texture "../textures/woodsm2.jpg" position 2 -8 20}
+			Drawer {size 24 6.5 40 texture "../textures/woodsm2.jpg" position 2 0 20}
+			Drawer {size 24 6.5 40 texture "../textures/woodsm2.jpg" position 28 -8 20}
+			Drawer {size 24 6.5 40 texture "../textures/woodsm2.jpg" position 28 0 20}
+			Drawer {size 22 6.5 40 texture "../textures/woodsm2.jpg" position 54 -8 20}
+			Drawer {size 22 6.5 40 texture "../textures/woodsm2.jpg" position 54 0 20}
+		]
+	}
+}
+
+PROTO Mattress
+[
+	field SFVec3f pos 0 0 0
+	field SFRotation mrotation 0 0 0 0
+	field SFVec3f mscale 1.0 1.0 1.0
+	
+	
+]
+{
+	Transform
+	{
+		translation IS pos
+		rotation IS mrotation
+		scale IS mscale
+
+		children
+		[
+			Shape
+			{
+				geometry Box {size 76 6 38}
+				appearance Appearance
+				{
+					texture ImageTexture{ url "../textures/texture.jpg" repeatS TRUE repeatT TRUE}
+					textureTransform TextureTransform {scale 7 5}
+				}
+			}
+		]
+	}
+}
+
+Transform
+{
+	scale .0254 .0254 .0254
+
+
+
+	children
+	[
+		Viewpoint
+		{
+			position 120  0 500
+		}
+		Bed {pos 157 -40 26}
+		Mattress { pos 196 -29 26}
+	]
+}

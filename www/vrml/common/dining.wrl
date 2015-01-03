@@ -1,0 +1,144 @@
+#VRML V2.0 utf8
+
+PROTO Leg
+[
+	field SFVec3f pos 0 0 0
+]
+{
+	Transform
+	{
+		translation IS pos
+		children
+		[
+			Shape
+			{
+				appearance	DEF TheAppearance Appearance
+							{
+								#texture DEF TheTexture ImageTexture
+								#{
+								#	url "white1.GIF"
+								#	repeatS TRUE repeatT TRUE
+								#}
+								#textureTransform TextureTransform { scale 7 5}
+								material Material { diffuseColor .5 .5 .5}
+							}
+
+				geometry	DEF TheTable Extrusion
+							{
+								solid	FALSE
+								crossSection
+								[
+									1 0,
+									.9239 .3827,
+									.7071 .7071,
+									.3827 .9239,
+									0 1,
+									-.3827 .9239,
+									-.7071 .7071,
+									-.9239 .3027,
+									-1 0,
+									-.9239 -.3027,
+									-.7071 -.7071,
+									-.3827 -.9239,
+									0 -1,
+									.3827 -.9239,
+									.7071 -.7071,
+									.9239 -.3027,
+									1 0
+								]
+								scale
+								[
+
+									.25 .25,
+									.75 .75
+								]
+								spine
+								[ 	0 0 0,
+									0 29 0
+								]
+
+							}
+
+			}
+
+		]
+	}
+}
+
+PROTO DiningTable
+[
+	field SFVec3f pos 0 0 0
+]
+{
+
+	Transform
+	{
+		translation IS pos
+
+		children
+		[
+			Shape
+			{
+				appearance	DEF TheAppearance Appearance
+							{
+								texture DEF TheTexture ImageTexture
+								{
+									url "../textures/diningtexture.gif"
+									repeatS TRUE repeatT TRUE
+								}
+
+								textureTransform TextureTransform { scale 40 40}
+								material Material {}
+							}
+
+				geometry	DEF TheTable Extrusion
+							{
+								solid	FALSE
+								crossSection
+								[
+									0 0,
+									1.368 6.888,
+									5.272 12.728,
+									11.112 16.630,
+									18 18,
+									30 18,
+									36.888 16.630,
+									42.7279 12.728,
+									46.6298 6.888,
+									48 0,
+									46.6298 -6.888,
+									42.7279 -12.728
+									36.888 -16.630,
+									30 -18,
+									18 -18,
+									11.112 -16.630,
+									5.272 -12.728,
+									1.368 -6.888,
+									0 0
+
+								]
+								spine
+								[ 	0 0 0,
+									0 1.5 0
+								]
+
+							}
+
+			}
+			Leg {pos 6 -29 10}
+			Leg {pos 6 -29 -10}
+			Leg {pos 42 -29 10}
+			Leg {pos 42 -29 -10}
+		]
+	}
+}
+
+
+Transform
+{
+
+	children
+	[
+		DiningTable{ pos -30 14 -64}
+	]
+}

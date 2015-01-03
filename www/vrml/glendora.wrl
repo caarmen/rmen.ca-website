@@ -1,0 +1,1280 @@
+#VRML V2.0 utf8
+EXTERNPROTO Door
+[
+	field SFVec3f dsize
+	field SFVec3f foo
+	field SFVec3f dpos
+	field SFImage img
+	field SFBool clockwise
+	field SFString dorientation
+	field SFBool closed
+	field SFInt32 angle
+	field SFFloat sizeKnob
+]
+"common/buildingparts.wrl#Door"
+
+EXTERNPROTO Piano
+[
+	field SFVec3f pos
+	field SFRotation rotation
+	field SFVec3f pscale
+]
+"common/piano.wrl#Piano"
+
+EXTERNPROTO Bed
+[
+	field SFVec3f pos
+	field SFVec3f bscale
+	field SFRotation brotation
+]
+"common/furniture.wrl#Bed"
+
+EXTERNPROTO Mattress
+[
+	field SFVec3f pos
+	field SFVec3f mscale
+	field SFRotation mrotation
+]
+"common/furniture.wrl#Mattress"
+
+EXTERNPROTO Desk
+[
+	field SFVec3f pos
+	field SFRotation rotation
+	field SFVec3f dscale
+]
+"common/desk.wrl#Desk"
+
+
+EXTERNPROTO FileCabinet
+[
+	field SFVec3f pos
+	field SFRotation rotation
+	field SFVec3f fscale
+	
+]
+"common/file.wrl#FileCabinet"
+
+WorldInfo {
+ title "prospero"
+ info ["This Web3D World was created with Vizx3D, a Web3D authoring tool"
+ "www.vizx3d.com"]
+}
+    	DirectionalLight
+    	{
+        	direction 0 -1 .5      # Light illuminating the scene
+	    }
+	    DirectionalLight
+	    {
+	    	direction 0 -1 -.5
+	    }
+	    DirectionalLight
+	    {
+	    	direction -1 -.6 -.4
+	    }
+	    DirectionalLight
+	    {
+	    	direction 1 -.3 -.7
+	    	color 1 1 .95
+	    }
+	    DirectionalLight
+	    {
+	    	direction .2 .3 .9
+	    	color .99 .99 1
+	    	ambientIntensity 1
+	    	intensity 0
+	    }
+
+	    Viewpoint
+	    {
+	    	position 10  20 -12
+	    	orientation 1 0 0 -1.6
+	    }
+
+## Vizthumbnail  Thumb_prospero4_wrl112960121130276012.jpg
+DEF dad_GROUND Transform {
+ children [
+  DEF GROUND Group {
+   children [
+    DEF dad_Import_Base Transform {
+     scale .304 .304 .304
+     children [
+      DEF Import_Base Group {
+       children [
+        DEF dad_Group1 Transform {
+         children [
+          DEF Group1 Group {
+           children [
+            DEF dad_Background1 Transform {
+             children [
+              DEF Background1 Background {
+               skyAngle [
+               ]
+               skyColor [
+                .50196 1 1
+               ]
+               groundAngle [
+               ]
+               groundColor [
+                0 .50196 .25098
+               ]
+              }
+             ]
+            }
+            DEF dad_Group2 Transform {
+             children [
+              DEF Group2 Group {
+               children [
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+    DEF dad_house Transform {
+     translation 6.374 0 -22.444
+     scale .304 .304 .304
+     children [
+      DEF house Group {
+       children [
+        DEF dad_floor_kit Transform {
+         translation .12503 -4 35.1933
+         children [
+         
+	#main door         
+         Door { dsize .2 8 3 dpos 22 4 -1.75 sizeKnob 0.2 clockwise TRUE dorientation "south" closed FALSE angle 20}
+         
+         #computer door
+         Door { dsize .2 8 2.5 dpos 3.5 4 18 sizeKnob 0.2 clockwise TRUE dorientation "south" closed FALSE angle 20}
+	
+	#family room door
+         Door { dsize 2.5 8 .2 dpos -14.5 3.5 2.5 sizeKnob 0.2 clockwise FALSE dorientation "west" closed FALSE angle 20}
+
+	# carmen's door
+         Door { dsize .2 8 2.5 dpos 9.5 4 -13.5 sizeKnob 0.2 clockwise FALSE dorientation "south" closed TRUE angle 20}
+
+	# carmen's closet door
+         Door { dsize .2 8 2 dpos 11.5 4 -10.5 sizeKnob 0.2 clockwise FALSE dorientation "south" closed TRUE angle 20}
+
+	# andrew's door
+         Door { dsize .2 8 2.5 dpos 9.5 4 -16.5 sizeKnob 0.2 clockwise TRUE dorientation "north" closed TRUE angle 20}
+
+	# andrew's closet door 1
+         Door { dsize .2 8 2.5 dpos 9.5 4 -21.5 sizeKnob 0.2 clockwise TRUE dorientation "north" closed TRUE angle 20}
+
+	# andrew's closet door 2
+         Door { dsize .2 8 2.5 dpos 9.5 4 -24 sizeKnob 0.2 clockwise FALSE dorientation "south" closed TRUE angle 20}
+
+	# mbd door
+         Door { dsize .2 8 2.5 dpos 6.5 4 -16.5 sizeKnob 0.2 clockwise FALSE dorientation "north" closed TRUE angle 20}
+
+	# mbd closet door 1
+         Door { dsize .2 8 2.5 dpos 6.5 4 -24 sizeKnob 0.2 clockwise TRUE dorientation "south" closed TRUE angle 20}
+
+	# mbd closet door 2
+         Door { dsize .2 8 2.5 dpos 6.5 4 -21.5 sizeKnob 0.2 clockwise FALSE dorientation "north" closed TRUE angle 20}
+
+	# mbath door
+         Door { dsize 2.5 8 .2 dpos -5 4 -15 sizeKnob 0.2 clockwise TRUE dorientation "east" closed FALSE angle 20}
+
+	# bath door
+         Door { dsize .2 8 2 dpos 3.5 4 -6 sizeKnob 0.2 clockwise FALSE dorientation "north" closed FALSE angle 20}
+
+	#laundry door
+         Door { dsize 2.5 8 .2 dpos -8.75 3.5 4.5 sizeKnob 0.2 clockwise FALSE dorientation "west" closed TRUE angle 20}
+
+	#laundry door
+         Door { dsize 2.5 8 .2 dpos -11 3.5 4.5 sizeKnob 0.2 clockwise TRUE dorientation "east" closed TRUE angle 20}
+
+	Piano{ pos 21 2 16 rotation 0 1 0 3.14159 pscale .0833 .0833 .0833}
+	
+	Bed {pos 20 .75 -11 brotation 0 1 0 -1.5708 bscale .0833 .0833 .0833}
+	Mattress {pos 20 1.5 -8 mrotation 0 1 0 -1.5708 mscale .0833 .0833 .0833}
+
+	Desk { pos 17 2.25 -4.5 rotation 0 1 0 -3.14159 dscale .0833 .0833 .0833}
+	
+	FileCabinet { pos 14 2.25 -14.5 rotation 0 1 0 0 fscale .0833 .0833 .0833}
+
+
+          DEF floor_kit Shape {
+		appearance Appearance
+		{
+			texture ImageTexture{ url "textures/tile3.jpg" repeatS TRUE repeatT TRUE}
+			textureTransform TextureTransform { scale 50 50}
+		}
+           geometry Box {
+            size 13 .2 9.5
+           }
+          }
+         ]
+        }
+        DEF dad_floor_bath Transform {
+         translation -1.62497 -4 27.6933
+         children [
+          DEF floor_bath Shape {
+		appearance Appearance
+		{
+			texture ImageTexture{ url "textures/tile3.jpg" repeatS TRUE repeatT TRUE}
+			textureTransform TextureTransform { scale 50 50}
+		}
+           geometry Box {
+            size 10 .2 5
+           }
+          }
+         ]
+        }
+        DEF dad_floor_mbath Transform {
+         translation .12503 -4 22.4433
+         children [
+          DEF floor_mbath Shape {
+		appearance Appearance
+		{
+			texture ImageTexture{ url "textures/tile3.jpg" repeatS TRUE repeatT TRUE}
+			textureTransform TextureTransform { scale 50 50}
+		}
+           geometry Box {
+            size 13 .2 5
+           }
+          }
+         ]
+        }
+        DEF dad_carpet_mbd Transform {
+         translation 5.12503 -4 29.1933
+         children [
+          DEF carpet_mbd Shape {
+		appearance Appearance
+		{
+			texture ImageTexture{ url "textures/browncarpet.jpg" repeatS TRUE repeatT TRUE}
+			textureTransform TextureTransform { scale 50 50}
+		}
+           geometry Box {
+            size 3.5 .2 2.5
+           }
+          }
+         ]
+        }
+        DEF dad_carpet_mbd0 Transform {
+         translation .37503 -4 13.5983
+         children [
+          DEF carpet_mbd0 Shape {
+		appearance Appearance
+		{
+			texture ImageTexture{ url "textures/browncarpet.jpg" repeatS TRUE repeatT TRUE}
+			textureTransform TextureTransform { scale 50 50}
+		}
+           geometry Box {
+            size 13 .2 13
+           }
+          }
+         ]
+        }
+        DEF dad_carpet_bd Transform {
+         translation 14.625 -4 23.443
+         children [
+          DEF carpet_bd Shape {
+		appearance Appearance
+		{
+			texture ImageTexture{ url "textures/browncarpet.jpg" repeatS TRUE repeatT TRUE}
+			textureTransform TextureTransform { scale 50 50}
+		}
+           geometry Box {
+            size 15.5 .2 33
+           }
+          }
+         ]
+        }
+        DEF dad_carpet_comp Transform {
+         translation 7.77503 -4 45.9433
+         children [
+          DEF carpet_comp Shape {
+		appearance Appearance
+		{
+			texture ImageTexture{ url "textures/browncarpet.jpg" repeatS TRUE repeatT TRUE}
+			textureTransform TextureTransform { scale 50 50}
+		}
+           geometry Box {
+            size 28.5 .2 12
+           }
+          }
+         ]
+        }
+        DEF step Transform {
+         translation -5.75 -4.5 42
+         children [
+          DEF carpet_comp Shape {
+		appearance Appearance
+		{
+			texture ImageTexture{ url "textures/tile2.jpg" repeatS TRUE repeatT TRUE}
+			textureTransform TextureTransform { scale 50 50}
+		}
+           geometry Box {
+            size 2 .5 4
+           }
+          }
+         ]
+        }
+  
+          DEF step_front_door Transform {
+           translation 20.5 -3.85 33.5
+           children [
+            DEF carpet_comp Shape {
+  		appearance Appearance
+  		{
+  			texture ImageTexture{ url "textures/tile2.jpg" repeatS TRUE repeatT TRUE}
+  			textureTransform TextureTransform { scale 50 50}
+  		}
+             geometry Box {
+              size 3 .1 3.5
+             }
+            }
+           ]
+          }
+          
+          DEF step_kitchen Transform {
+           translation -4.75 -3.85 41.75
+           children [
+            DEF carpet_comp Shape {
+  		appearance Appearance
+  		{
+  			texture ImageTexture{ url "textures/tile3.jpg" repeatS TRUE repeatT TRUE}
+  			textureTransform TextureTransform { scale 50 50}
+  		}
+             geometry Box {
+              size 3.5 .1 4.5
+             }
+            }
+           ]
+          }
+
+        DEF dad_carpet_comp0 Transform {
+         translation -1.37497 -4.5 55.9433
+         children [
+          DEF carpet_comp0 Shape {
+		appearance Appearance
+		{
+			texture ImageTexture{ url "textures/browncarpet.jpg" repeatS TRUE repeatT TRUE}
+			textureTransform TextureTransform { scale 50 50}
+		}
+           geometry Box {
+            size 10 .2 8
+           }
+          }
+         ]
+        }
+        DEF dad_carpet_fam Transform {
+         translation -14.62497 -4.5 48.9433
+         children [
+          DEF carpet_fam Shape {
+		appearance Appearance
+		{
+			texture ImageTexture{ url "textures/browncarpet.jpg" repeatS TRUE repeatT TRUE}
+			textureTransform TextureTransform { scale 50 50}
+		}
+           geometry Box {
+            size 16 .2 22
+           }
+          }
+         ]
+        }
+        DEF dad_fam_backyard Transform {
+         translation -22.12497 1 37.6933
+         children [
+          DEF fam_backyard Shape {
+           appearance Appearance {
+            material DEF White_mat Material {
+             ambientIntensity 0.200
+             shininess 0.200
+             diffuseColor 1 1 1
+            }
+           }
+           geometry Box {
+            size 1 3 .5
+           }
+          }
+         ]
+        }
+        DEF dad_fam_backyard2 Transform {
+         translation -16.12497 1 37.6933
+         children [
+          DEF fam_backyard2 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 1 3 .5
+           }
+          }
+         ]
+        }
+        DEF dad_fam_backyard1 Transform {
+         translation -19.12497 -2.5 37.6933
+         children [
+          DEF fam_backyard1 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 7 4 .5
+           }
+          }
+         ]
+        }
+        DEF dad_fam_backyard0 Transform {
+         translation -19.12497 3 37.6933
+         children [
+          DEF fam_backyard0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 7 1 .5
+           }
+          }
+         ]
+        }
+        DEF dad_fam_side3 Transform {
+         translation -22.87497 1 48.9433
+         children [
+          DEF fam_side3 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 3 6
+           }
+          }
+         ]
+        }
+        DEF dad_fam_side Transform {
+         translation -22.87497 1 38.4433
+         children [
+          DEF fam_side Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 3 2
+           }
+          }
+         ]
+        }
+        DEF dad_fam_side2 Transform {
+         translation -22.87497 1 59.4433
+         children [
+          DEF fam_side2 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 3 2
+           }
+          }
+         ]
+        }
+        DEF dad_fam_side1 Transform {
+         translation -22.87497 -2.5 48.9433
+         children [
+          DEF fam_side1 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 4 23
+           }
+          }
+         ]
+        }
+        DEF dad_fam_side0 Transform {
+         translation -22.87497 3 48.9433
+         children [
+          DEF fam_side0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 1 23
+           }
+          }
+         ]
+        }
+        DEF dad_comp_nbr Transform {
+         translation 1.87503 1 60.1933
+         children [
+          DEF comp_nbr Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 3 3 .5
+           }
+          }
+         ]
+        }
+        DEF dad_comp_nbr3 Transform {
+         translation -10.37497 1 60.1933
+         children [
+          DEF comp_nbr3 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 9 3 .5
+           }
+          }
+         ]
+        }
+        DEF dad_comp_nbr2 Transform {
+         translation -21.62497 1 60.1933
+         children [
+          DEF comp_nbr2 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 2 3 .5
+           }
+          }
+         ]
+        }
+        DEF dad_comp_nbr1 Transform {
+         translation -9.62497 -2.5 60.1933
+         children [
+          DEF comp_nbr1 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 26 4 .5
+           }
+          }
+         ]
+        }
+        DEF dad_comp_nbr0 Transform {
+         translation -9.62497 3 60.1933
+         children [
+          DEF comp_nbr0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 26 1 .5
+           }
+          }
+         ]
+        }
+        DEF dad_liv_backyard Transform {
+         translation 6.12503 -.5 51.6933
+         children [
+          DEF liv_backyard Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 5 7 .5
+           }
+          }
+         ]
+        }
+        DEF dad_liv_backyard0 Transform {
+         translation 18.87503 -.5 51.6933
+         children [
+          DEF liv_backyard0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 6 7 .5
+           }
+          }
+         ]
+        }
+        DEF dad_liv_backyard1 Transform {
+         translation 12.87503 3.5 51.6933
+         children [
+          DEF liv_backyard1 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 18 1 .5
+           }
+          }
+         ]
+        }
+        DEF dad_comp2 Transform {
+         translation 3.62503 -.5 57.4433
+         children [
+          DEF comp2 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 6
+           }
+          }
+         ]
+        }
+        DEF dad_mbd_bath Transform {
+         translation 1.37503 0 20.1933
+         children [
+          DEF mbd_bath Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 10 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_carmen_andrew0 Transform {
+         translation 15.625 0 20.193
+         children [
+          DEF carmen_andrew0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 12.5 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_bath_kit Transform {
+         translation -1.12497 0 30.4433
+         children [
+          DEF bath_kit Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 10 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_baths Transform {
+         translation .12503 0 24.9433
+         children [
+          DEF baths Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 12.5 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_kit_liv Transform {
+         translation 6.62503 0 35.1933
+         children [
+          DEF kit_liv Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 10
+           }
+          }
+         ]
+        }
+        DEF dad_fam_din Transform {
+         translation -6.37497 -.5 47.9433
+         children [
+          DEF fam_din Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 8
+           }
+          }
+         ]
+        }
+        DEF dad_com_din Transform {
+         translation -3.12497 -.5 51.9433
+         children [
+          DEF com_din Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 6 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_kit_din Transform {
+         translation 1.62503 -2 39.9433
+         children [
+          DEF kit_din Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 9.5 4 .5
+           }
+          }
+         ]
+        }
+        DEF dad_fam_comp Transform {
+         translation -6.37497 -.5 55.9433
+         children [
+          DEF fam_comp Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 8
+           }
+          }
+         ]
+        }
+        DEF dad_mbd_hall0 Transform {
+         translation 6.62503 0 8.9433
+         children [
+          DEF mbd_hall0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 3
+           }
+          }
+         ]
+        }
+        DEF dad_bath_hall0 Transform {
+         translation 6.62503 0 23.9433
+         children [
+          DEF bath_hall0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 8
+           }
+          }
+         ]
+        }
+        DEF dad_smallwall Transform {
+         translation -5.87497 0 20.1933
+         children [
+          DEF smallwall Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_bath_hall Transform {
+         translation 3.62503 0 26.6933
+         children [
+          DEF bath_hall Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 3
+           }
+          }
+         ]
+        }
+        DEF dad_heater Transform {
+         translation 5.12503 0 27.6933
+         children [
+          DEF heater Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 2.5 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_carmen_andrew Transform {
+         translation 15.625 0 30.943
+         children [
+          DEF carmen_andrew Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 12.5 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_andrew_hall Transform {
+         translation 9.625 0 26.75
+         children [
+          DEF andrew_hall Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 8
+           }
+          }
+         ]
+        }
+        DEF dad_liv_frontyard0 Transform {
+         translation 22.12503 -.5 37.9433
+         children [
+          DEF liv_frontyard0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 7 6
+           }
+          }
+         ]
+        }
+        DEF dad_fam_yard1 Transform {
+         translation -9.62497 -.5 37.6933
+         children [
+          DEF fam_yard1 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 6 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_laundry1 Transform {
+         translation -6.37497 -.5 38.9433
+         children [
+          DEF laundry1 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 2.25
+           }
+          }
+         ]
+        }
+        DEF dad_fam_yard Transform {
+         translation -12.62497 -.5 39.6933
+         children [
+          DEF fam_yard Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 1 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_fam_yard Transform {
+         translation -7.12497 -.5 39.6933
+         children [
+          DEF fam_yard Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 1 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_laundry_door Transform {
+         translation -12.87497 -.5 38.6933
+         children [
+          DEF laundry_door Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 2.5
+           }
+          }
+         ]
+        }
+        DEF dad_back_hall Transform {
+         translation 8.12503 0 17.1933
+         children [
+          DEF back_hall Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 2.5 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_mbd_hall1 Transform {
+         translation 9.62503 0 8.9433
+         children [
+          DEF mbd_hall1 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 3
+           }
+          }
+         ]
+        }
+        DEF dad_mbd_hall2 Transform {
+         translation 6.62503 0 16.1933
+         children [
+          DEF mbd_hall2 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 3
+           }
+          }
+         ]
+        }
+        DEF dad_mbd_hall Transform {
+         translation 9.62503 0 16.1933
+         children [
+          DEF mbd_hall Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 3
+           }
+          }
+         ]
+        }
+        DEF dad_andrew_mbd_closet Transform {
+         translation 8.12503 0 12.1933
+         children [
+          DEF andrew_mbd_closet Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 9.5
+           }
+          }
+         ]
+        }
+        DEF dad_bd_deck0 Transform {
+         translation 22.125 3.5 19.443
+         children [
+          DEF bd_deck0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 1 25
+           }
+          }
+         ]
+        }
+        DEF dad_carmen_deck Transform {
+         translation 22.12503 1.5 29.9433
+         children [
+          DEF carmen_deck Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 3 4
+           }
+          }
+         ]
+        }
+        DEF dad_bd_deck Transform {
+         translation 22.12503 -2 19.4433
+         children [
+          DEF bd_deck Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 4 25
+           }
+          }
+         ]
+        }
+        DEF dad_carmen_andrew_deck Transform {
+         translation 22.12503 1.5 19.9433
+         children [
+          DEF carmen_andrew_deck Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 3 6
+           }
+          }
+         ]
+        }
+        DEF dad_andrew_deck Transform {
+         translation 22.12503 1.5 9.9433
+         children [
+          DEF andrew_deck Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 3 6
+           }
+          }
+         ]
+        }
+        DEF dad_mbr_yard0 Transform {
+         translation 7.87503 3.5 7.1933
+         children [
+          DEF mbr_yard0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 28 1 .5
+           }
+          }
+         ]
+        }
+        DEF dad_mbr_yard1 Transform {
+         translation -5.12497 -.5 7.1933
+         children [
+          DEF mbr_yard1 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 2 7 .5
+           }
+          }
+         ]
+        }
+        DEF dad_mbr_yard2 Transform {
+         translation 8.12503 -.5 7.1933
+         children [
+          DEF mbr_yard2 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 8 7 .5
+           }
+          }
+         ]
+        }
+        DEF dad_mbr_yard Transform {
+         translation 20.87503 -.5 7.1933
+         children [
+          DEF mbr_yard Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 2 7 .5
+           }
+          }
+         ]
+        }
+        DEF dad_kitchen_yard0 Transform {
+         translation -6.37497 3.5 22.4433
+         children [
+          DEF kitchen_yard0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 1 31
+           }
+          }
+         ]
+        }
+        DEF dad_mbd_yard Transform {
+         translation -6.37497 -2 22.4433
+         children [
+          DEF mbd_yard Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 4 31
+           }
+          }
+         ]
+        }
+        DEF dad_mbath_yard Transform {
+         translation -6.37497 1.5 14.4433
+         children [
+          DEF mbath_yard Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 3 15
+           }
+          }
+         ]
+        }
+        DEF dad_bathroom_yard Transform {
+         translation -6.37497 1.5 25.1933
+         children [
+          DEF bathroom_yard Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 3 2.5
+           }
+          }
+         ]
+        }
+        DEF dad_kitchen_yard1 Transform {
+         translation -6.37497 1.5 30.4433
+         children [
+          DEF kitchen_yard1 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 3 4
+           }
+          }
+         ]
+        }
+        DEF dad_kitchen_yard Transform {
+         translation -6.37497 1.5 36.9433
+         children [
+          DEF kitchen_yard Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 3 2
+           }
+          }
+         ]
+        }
+        DEF dad_mbath_window Transform {
+         translation -6.37497 .5 22.9433
+         children [
+          DEF mbath_window Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 1 2
+           }
+          }
+         ]
+        }
+        DEF dad_bath_window Transform {
+         translation -6.37497 .5 27.4433
+         children [
+          DEF bath_window Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 1 2
+           }
+          }
+         ]
+        }
+        DEF dad_liv_frontyard1 Transform {
+         translation 22.12503 3.5 43.4433
+         children [
+          DEF liv_frontyard1 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 1 17
+           }
+          }
+         ]
+        }
+        DEF dad_liv_frontyard Transform {
+         translation 22.12503 -.5 49.9433
+         children [
+          DEF liv_frontyard Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 7 4
+           }
+          }
+         ]
+        }
+        DEF dad_carmen_closetl0 Transform {
+         translation 11.5 0 23.25
+         children [
+          DEF carmen_closetl0 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 1
+           }
+          }
+         ]
+        }
+        DEF dad_carmen_closetl1 Transform {
+         translation 11.5 0 26.5
+         children [
+          DEF carmen_closetl1 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size .5 8 2
+           }
+          }
+         ]
+        }
+        DEF dad_carmen_closetl2 Transform {
+         translation 10.5 0 27.25
+         children [
+          DEF carmen_closetl2 Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 1.5 8 .5
+           }
+          }
+         ]
+        }
+        DEF dad_carmen_closetl Transform {
+         translation 10.5 0 23
+         children [
+          DEF carmen_closetl Shape {
+           appearance Appearance {
+            material USE White_mat
+           }
+           geometry Box {
+            size 1.5 8 .5
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

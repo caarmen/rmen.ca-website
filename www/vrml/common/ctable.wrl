@@ -1,0 +1,66 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO Door
+[
+	field SFVec3f dsize
+	field SFVec3f dpos
+	field SFBool clockwise
+	field SFString dorientation
+	field SFBool closed
+	field SFInt32 angle
+	field MFString texture
+]
+"buildingparts.wrl#Door"
+
+
+
+EXTERNPROTO Panel
+[
+	field SFVec3f size
+	field SFVec3f position
+	field MFString texture
+]
+"desk.wrl#Panel"
+
+PROTO CoffeeTable
+[
+	field SFVec3f pos 0 0 0
+	field SFRotation rotation 0 0 0 0
+]
+{
+	Transform
+	{
+		translation IS pos
+		rotation IS rotation
+		children
+		[
+			Panel {texture "../textures/woodsm.gif" size 26 1 26 position 13 -.5 13}
+			Panel {texture "../textures/woodsm.gif" size .5 15 25 position .75 -8.5 13}
+			Panel {texture "../textures/woodsm.gif" size .5 15 25 position 24.75 -8.5 13}
+			Panel {texture "../textures/woodsm.gif" size 25 15 .5 position 13 -8.5 .75}
+			Panel {texture "../textures/woodsm.gif" size 26 3 26 position 13 -17.5 13}
+			Panel {texture "../textures/woodsm.gif" size 1.5 15 .5 position 1.75 -8.5.25}
+			Panel {texture "../textures/woodsm.gif" size 1.5 15 .5 position 23.75 -8.5.25}
+			Door
+			{
+				dsize 11.5 15 1 dpos 7.25 -8.5 24.5 texture "../textures/woodsm.gif" dorientation "east"
+			}
+			Door
+			{
+				dsize 11.5 15 1 dpos 18.75 -8.5 24.5 texture "../textures/woodsm.gif" dorientation "west" clockwise FALSE
+			}
+
+		]
+	}
+}
+
+
+Transform
+{
+	#scale .0254 .0254 .0254
+
+	children
+	[
+		CoffeeTable{ pos -30 14 -64}
+	]
+}

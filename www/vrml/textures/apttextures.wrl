@@ -1,0 +1,102 @@
+#VRML V2.0 utf8
+
+
+PROTO Carpet
+[
+	field SFVec3f csize 0 0 0
+	field SFVec3f cpos 0 0 0
+]
+{
+	Transform
+	{
+		translation IS cpos
+		children
+		[
+			Shape
+			{
+				geometry Box {size IS csize}
+				appearance Appearance
+				{
+					texture ImageTexture{ url "carpet2.jpg" repeatS TRUE repeatT TRUE}
+					textureTransform TextureTransform { scale 20 20}
+				}
+			}
+		]
+	}
+}
+PROTO BathroomTile
+[
+	field SFVec3f csize 0 0 0
+	field SFVec3f cpos 0 0 0
+]
+{
+	Transform
+	{
+		translation IS cpos
+		children
+		[
+			Shape
+			{
+				geometry Box {size IS csize}
+				appearance Appearance
+				{
+					texture ImageTexture{ url "tile1.jpg" repeatS TRUE repeatT TRUE}
+					textureTransform TextureTransform {scale 20 20}
+				}
+			}
+		]
+	}
+}
+
+PROTO KitchenTile
+[
+	field SFVec3f csize 0 0 0
+	field SFVec3f cpos 0 0 0
+]
+{
+	Transform
+	{
+		translation IS cpos
+		children
+		[
+			Shape
+			{
+				geometry Box {size IS csize}
+				appearance Appearance
+				{
+					texture ImageTexture{ url "tile2.jpg" repeatS TRUE repeatT TRUE}
+					textureTransform TextureTransform { scale 20 20 }
+				}
+			}
+		]
+	}
+}
+
+PROTO HardwoodFloor
+[
+	field SFVec3f csize 0 0 0
+	field SFVec3f cpos 0 0 0
+]
+{
+	Transform
+	{
+		translation IS cpos
+		children
+		[
+			Shape
+			{
+				geometry Box {size IS csize}
+				appearance Appearance
+				{
+					texture ImageTexture{ url "wood_floor.png" repeatS TRUE repeatT TRUE}
+					textureTransform TextureTransform { scale 20 20}
+				}
+			}
+		]
+	}
+}
+
+
+
+
+

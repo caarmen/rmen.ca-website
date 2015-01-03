@@ -1,0 +1,223 @@
+#VRML V2.0 utf8
+
+
+EXTERNPROTO Wall
+[
+	field SFVec3f wsize
+	field SFVec3f wpos
+]
+"common/buildingparts.wrl#Wall"
+
+EXTERNPROTO Carpet [
+	field SFVec3f csize
+	field SFVec3f cpos
+]
+"textures/apttextures.wrl#Carpet"
+
+EXTERNPROTO HardwoodFloor [
+	field SFVec3f csize
+	field SFVec3f cpos
+]
+"textures/apttextures.wrl#HardwoodFloor"
+
+EXTERNPROTO BathroomTile
+[	field SFVec3f csize
+	field SFVec3f cpos
+]
+"textures/apttextures.wrl#BathroomTile"
+
+EXTERNPROTO KitchenTile
+[	field SFVec3f csize
+	field SFVec3f cpos
+]
+"textures/apttextures.wrl#KitchenTile"
+
+EXTERNPROTO Door
+[
+	field SFVec3f dsize
+	field SFVec3f foo
+	field SFVec3f dpos
+	field SFImage img
+	field SFBool clockwise
+	field SFString dorientation
+	field SFBool closed
+	field SFInt32 angle
+]
+"common/buildingparts.wrl#Door"
+
+EXTERNPROTO Bed
+[
+	field SFVec3f pos
+]
+"common/furniture.wrl#Bed"
+
+EXTERNPROTO Mattress
+[
+	field SFVec3f pos
+]
+"common/furniture.wrl#Mattress"
+
+EXTERNPROTO Desk
+[
+	field SFVec3f pos
+	field SFRotation rotation
+]
+"common/desk.wrl#Desk"
+
+EXTERNPROTO CoffeeTable
+[
+	field SFVec3f pos
+	field SFRotation rotation
+]
+"common/ctable.wrl#CoffeeTable"
+
+EXTERNPROTO DiningTable
+[
+	field SFVec3f pos
+]
+"common/dining.wrl#DiningTable"
+
+EXTERNPROTO FileCabinet
+[
+	field SFVec3f pos
+	field SFRotation rotation
+]
+"common/file.wrl#FileCabinet"
+
+EXTERNPROTO Piano
+[
+	field SFVec3f pos
+	field SFRotation rotation
+	field SFVec3f pscale
+]
+"common/piano.wrl#Piano"
+
+Transform
+{
+	scale .0254 .0254 .0254
+
+	children
+	[
+		Background
+		{
+			groundColor 0 .2 0
+			skyColor 0 .8 1
+		}
+		NavigationInfo
+		{
+			speed 35
+			headlight FALSE
+		} # We'll add our own light
+
+		DirectionalLight
+		{
+			direction 0 -1 .5      # Light illuminating the scene
+		}
+		DirectionalLight
+		{
+			direction 0 -1 -.5
+		}
+		DirectionalLight
+		{
+			direction -1 -.6 -.4
+		}
+		DirectionalLight
+		{
+			direction 1 -.3 -.7
+			color 1 1 .95
+		}
+		DirectionalLight
+		{
+			direction .2 .3 .9
+			color .99 .99 1
+			ambientIntensity 1
+			intensity 0
+		}
+
+		Viewpoint
+		{
+			position 390  900 250
+			orientation 1 0 0 -1.6
+		}
+
+		#long wall kitchen
+		Wall { wsize 790 250 10 wpos 390 0 0}
+		#long wall with neighbor
+		Wall { wsize 790 250 10 wpos 390 0 570}
+		#wall with windows
+		Wall { wsize 10 10 570 wpos 0 120 285}
+		Wall { wsize 10 105 570 wpos 0 -72 285}
+		Wall { wsize 10 250 25 wpos 0 0 285}
+		#short wall kitchen
+		Wall { wsize 10 250 440 wpos 780 0 350}		
+		Wall { wsize 10 250 40 wpos 780 0 20}		
+		Wall { wsize 10 40 90 wpos 780 105 85}
+		
+		Door { dsize 10 210 90 dpos 780 0 85 clockwise TRUE dorientation "south" closed FALSE angle 45}
+
+
+		#wall between computer room and living room
+		Wall { wsize 230 250 10 wpos 350 0 255}
+		#wall between hallway and computer room
+		Wall { wsize 10 250 285 wpos 560 0 288}
+		
+		#short wall between kitchen and living room
+		Wall { wsize 10 250 75 wpos 560 0 532}
+		#over kitchen door
+		Wall { wsize 10 40 75 wpos 560 105 458}
+		#short wall between kitchen and living room
+		Wall { wsize 105 250 10 wpos 512 0 495}
+		#short wall between kitchen and living room
+		Wall { wsize 10 250 75 wpos 465 0 532}
+		Door { dsize 10 210 75 dpos 560 0 458 clockwise FALSE dorientation "south" closed FALSE angle 45}
+
+
+		#wall between kitchen and bathroom
+		Wall { wsize 210 250 10 wpos 675 0 420}	    
+		#wall between bathtub and kitchen
+		Wall { wsize 135 250 10 wpos 637 0 325}	    
+		#wall between toilet and kitchen
+		Wall { wsize 10 250 65 wpos 700 0 357}	    
+		#wall between toilet and kitchen
+		Wall { wsize 85 250 10 wpos 737 0 390}
+
+
+		#bathroom door
+		Wall { wsize 95 250 10 wpos 603 0 145}
+		#bathroom door
+		Wall { wsize 60 250 10 wpos 750 0 145}
+		#over bathroom door
+		Wall { wsize 70 40 10 wpos 685 105 145}
+		Door { dsize 70 210 10 dpos 685 0 145 clockwise TRUE dorientation "east" closed FALSE angle 45}
+
+		#closet
+		Wall { wsize 10 250 180 wpos 465 0 90}
+		#closet
+		Wall { wsize 10 250 180 wpos 400 0 90}
+		#closet
+		Wall { wsize 65 250 10 wpos 433 0 175}   
+		#over bedroom door
+		Wall { wsize 10 40 70 wpos 465 105 215}
+		Door { dsize 10 210 70 dpos 465 0 220 clockwise FALSE dorientation "north" closed FALSE angle 45}
+
+		Wall { wsize 80 40 10 wpos 520 105 255}
+		Wall { wsize 15 250 10 wpos 472 0 255}
+		Door { dsize 80 210 10 dpos 520 0 255 clockwise FALSE dorientation "west" closed FALSE angle 45}
+		
+		HardwoodFloor { csize 560 10 570 cpos 280 -125 285}
+		HardwoodFloor { csize 220 10 145 cpos 670 -125 72}
+		
+		KitchenTile { csize 220 10 150 cpos 670 -125 495}
+
+		BathroomTile { csize 220 10 180 cpos 670 -125 235}
+		BathroomTile { csize 80 10 75 cpos 740 -125 353}
+
+		Piano{ pos 20 -23.5 270 rotation 0 1 0 1.5708 pscale 2.54 2.54 2.54}
+		
+
+	] # end of children for world
+}
+
+
+
+

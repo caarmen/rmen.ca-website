@@ -1,0 +1,92 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO Drawer
+[
+	field SFVec3f size
+	field MFString texture
+	field SFVec3f position
+]
+"drawer.wrl#Drawer"
+
+
+
+PROTO Panel
+[
+	field SFVec3f size 0 0 0
+	field SFVec3f position 0 0 0
+	field MFString texture ""
+]
+{
+
+	Transform
+	{
+		translation IS position
+		children
+		[
+			Shape
+			{
+				geometry Box{ size IS size }
+				appearance Appearance
+				{
+					texture ImageTexture{ url IS texture repeatS TRUE repeatT TRUE}
+					textureTransform TextureTransform { scale 7 5}
+					material Material {shininess .2}
+				}
+		}
+		]
+	}
+}
+
+PROTO Desk
+[
+	field SFVec3f pos 0 0 0
+	field SFRotation rotation 0 0 0 0
+	field SFVec3f dscale 1.0 1.0 1.0
+]
+{
+	Transform
+	{
+		translation IS pos
+		rotation IS rotation
+		scale IS dscale
+		children
+		[
+			Panel{texture "../textures/woodsm.gif" size 60 1 30 position 30 -.5 15}
+			#legs
+			Panel{texture "../textures/woodsm.gif" size 1.5 27 1.5 position .75 -14.5 27.75}
+			Panel{texture "../textures/woodsm.gif" size 1.5 27 1.5 position 59.25 -14.5 27.75}
+			Panel{texture "../textures/woodsm.gif" size 1.5 27 1.5 position .75 -14 6.75}
+			Panel{texture "../textures/woodsm.gif" size 1.5 27 1.5 position 59.25 -14 6.75}
+			#left drawers
+			Panel{texture "../textures/woodsm.gif" size 1.5 18 21 position 1.875 -10 18}
+			Panel{texture "../textures/woodsm.gif" size 1.5 18 21 position 17.625 -10 18}
+			Panel{texture "../textures/woodsm.gif" size 15 .75 21 position 9.75 -1.375 18}
+			Panel{texture "../textures/woodsm.gif" size 15 .75 21 position 9.75 -18.625 18}
+			Drawer{size 15 5.5 21 position 2.25 -7.25 28.5 texture "../textures/woodsm2.jpg"}
+			Drawer{size 15 11 21 position 2.25 -18.25 28.5 texture "../textures/woodsm2.jpg"}
+
+			#right drawers
+			Panel{texture "../textures/woodsm.gif" size 1.5 18 21 position 42.375 -10 18}
+			Panel{texture "../textures/woodsm.gif" size 1.5 18 21 position 58.125 -10 18}
+			Panel{texture "../textures/woodsm.gif" size 15 .75 21 position 50.25 -1.375 18}
+			Panel{texture "../textures/woodsm.gif" size 15 .75 21 position 50.25 -18.625 18}
+			Drawer{size 15 5.5 21 position 42.75 -7.25 28.5 texture "../textures/woodsm2.jpg"}
+			Drawer{size 15 5.5 21 position 42.75 -12.75 28.5 texture "../textures/woodsm2.jpg"}
+			Drawer{size 15 5.5 21 position 42.75 -18.25 28.5 texture "../textures/woodsm2.jpg"}
+
+			#back panel
+			Panel{texture "../textures/woodsm.gif" size 57 18 .75 position 30 -10 7.125}
+		]
+	}
+}
+
+
+Transform
+{
+	#scale .0254 .0254 .0254
+
+	children
+	[
+		Desk{ pos -30 14 -64 }
+	]
+}

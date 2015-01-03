@@ -1,0 +1,61 @@
+body {
+/*
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+*/
+}
+h1, h2 {
+/*	text-align: center;*/
+}
+div.index h3 {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+div.index h1 {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+.index {
+/*	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 400px;
+*/
+}
+div.index a {
+	color:inherit;
+	text-decoration: none;
+}
+.poem {
+/*	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+*/
+}
+.poem:after, .index:before, .index:after {
+	display: block;
+	background: url('images/leaf2.png') repeat-x;
+	content: " ";
+	height: 74px;
+	width: 378px;
+	margin-top: 32px;
+}
+.poem-number {
+	white-space: pre ;
+	color: white;
+	font-weight: bold;
+}
+.poem-content {
+	white-space: pre ;
+}
+.poem-date {
+	white-space: pre ;
+	font-size: 0.8em;
+	color: #BB99BB;
+	font-style: italic;
+}
+.copyright {
+/*	text-align: center;*/
+	font-size: 0.6em;
+}

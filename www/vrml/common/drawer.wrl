@@ -1,0 +1,204 @@
+#VRML V2.0 utf8
+
+PROTO Drawer
+[
+	field SFVec3f size 0 0 0
+	field MFString texture ""
+	field SFVec3f position 0 0 0
+]
+{
+
+	Transform
+	{
+		translation IS position
+		children
+		[
+
+			Sound
+			{
+				source	DEF DrawerClose AudioClip
+				{
+					url	"../sounds/drawerclose.wav"
+					stopTime 1
+				}
+
+				minFront	1000
+				maxFront	1000
+				minBack	1000
+				maxBack	1000
+			}
+			Sound
+			{
+				source DEF DrawerOpen AudioClip
+				{
+					url "../sounds/draweropen.wav"
+					stopTime 1
+				}
+				minFront	1000
+				maxFront	1000
+				minBack	1000
+				maxBack	1000
+
+			}
+			DEF TheTransform Transform
+			{
+				rotation 1 0 0 -1.5707963
+				children
+				[
+					DEF Clicker TouchSensor {}
+
+					Shape
+					{
+						appearance	DEF TheAppearance Appearance
+									{
+										texture DEF TheTexture ImageTexture
+										{
+											url IS texture
+											repeatS TRUE repeatT TRUE
+										}
+										textureTransform TextureTransform { scale 7 5}
+										material Material {}
+									}
+
+						geometry	DEF TheDrawer Extrusion
+									{
+										solid	FALSE
+									}
+
+					}
+
+					Shape
+
+					{
+						geometry	DEF Front Extrusion { solid FALSE }
+						appearance USE TheAppearance
+					}
+					Shape
+					{
+						geometry	DEF Back Extrusion { solid FALSE }
+						appearance USE TheAppearance
+					}
+					DEF Knob Transform
+					{
+						children
+						[
+							Shape
+							{
+								geometry DEF TheKnob Sphere {radius .7}
+								appearance Appearance
+								{
+									material Material { diffuseColor .8 .8 0 shininess 1 }
+								}
+
+							}
+						]
+					}
+
+				]
+			}
+		]
+	}
+	DEF DrawerActions Script
+	{
+		eventIn  SFTime touchTime
+
+		eventOut MFVec2f drawerCrossSection
+		eventOut MFVec2f frontCrossSection
+		eventOut MFVec2f backCrossSection
+		eventOut MFVec3f drawerSpine
+		eventOut MFVec3f frontSpine
+		eventOut MFVec3f backSpine
+		eventOut SFVec3f drawerPosition
+		eventOut SFVec3f knobPosition
+		field SFVec3f size 0 0 0
+		field SFVec3f origPosition 0 0 0
+		field SFBool closed TRUE
+		eventOut SFTime drawerClosed
+		eventOut SFTime drawerOpened
+
+
+		size IS size
+
+
+		url "javascript:
+			function initialize()
+			{
+
+				radius = 0.04*size[0]
+				drawerCrossSection = new MFVec2f()
+				drawerCrossSection[0] = new SFVec2f(0,size[1])
+				drawerCrossSection[1] = new SFVec2f(0,0)
+				drawerCrossSection[2] = new SFVec2f(size[0],0)
+				drawerCrossSection[3] = new SFVec2f(size[0],size[1])
+				drawerCrossSection[4] = new SFVec2f(size[0]-.04*size[0] ,size[1])
+				drawerCrossSection[5] = new SFVec2f(size[0]-.04*size[0] ,.04*size[0])
+				drawerCrossSection[6] = new SFVec2f(.04*size[0] ,.04*size[0])
+				drawerCrossSection[7] = new SFVec2f(.04*size[0], size[1])
+				drawerCrossSection[8] = new SFVec2f(0, size[1])
+
+				backCrossSection = new MFVec2f()
+				backCrossSection[0] = new SFVec2f(0, 0);
+				backCrossSection[1] = new SFVec2f(size[0], 0)
+				backCrossSection[2] = new SFVec2f(size[0], size[1]);
+				backCrossSection[3] = new SFVec2f(0, size[1]);
+				backCrossSection[4] = new SFVec2f(0,0);
+
+				frontCrossSection = new MFVec2f()
+				frontCrossSection[0] = new SFVec2f(0, 0);
+				frontCrossSection[1] = new SFVec2f(size[0], 0)
+				frontCrossSection[2] = new SFVec2f(size[0], size[1]);
+				frontCrossSection[3] = new SFVec2f(0, size[1]);
+				frontCrossSection[4] = new SFVec2f(0,0);
+
+				drawerSpine = new MFVec3f()
+				drawerSpine[0] = new SFVec3f(0,0,0)
+				drawerSpine[1] = new SFVec3f(0,size[2],0)
+
+				frontSpine = new MFVec3f()
+				frontSpine[1] = new SFVec3f(0,size[2],0)
+				frontSpine[0] = new SFVec3f(0,size[2]-.04*size[0],0)
+
+				backSpine = new MFVec3f()
+				backSpine[1] = new SFVec3f(0,.04*size[0],0)
+				backSpine[0] = new SFVec3f(0,0,0)
+
+				knobPosition = new SFVec3f(size[0]/2, 0, size[1]/2)
+
+			}
+			function touchTime(value)
+			{
+				if(closed == TRUE)
+				{
+					drawerPosition = new SFVec3f(0,0,size[2]/2)
+					closed = FALSE
+					drawerOpened = value
+				}
+				else
+				{
+					drawerPosition = new SFVec3f(0,0,0)
+					closed = TRUE
+					drawerClosed = value
+				}
+			}
+			"
+	}
+	ROUTE Clicker.touchTime TO DrawerActions.touchTime
+	ROUTE DrawerActions.drawerCrossSection TO TheDrawer.set_crossSection
+	ROUTE DrawerActions.frontCrossSection TO Front.set_crossSection
+	ROUTE DrawerActions.backCrossSection TO Back.set_crossSection
+	ROUTE DrawerActions.drawerSpine TO TheDrawer.set_spine
+	ROUTE DrawerActions.frontSpine TO Front.set_spine
+	ROUTE DrawerActions.backSpine TO Back.set_spine
+	ROUTE DrawerActions.drawerPosition TO TheTransform.translation
+	ROUTE DrawerActions.knobPosition TO Knob.translation
+	ROUTE DrawerActions.drawerClosed TO DrawerClose.startTime
+	ROUTE DrawerActions.drawerOpened TO DrawerOpen.startTime
+}
+
+Transform
+{
+	children
+	[
+		Drawer{size 5 4 7 texture "../textures/woodsm.gif"}
+	]
+}

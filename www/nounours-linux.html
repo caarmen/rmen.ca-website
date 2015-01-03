@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Carmen Alvarez - Nounours for Linux</title>
+<link rel="stylesheet" type="text/css" href="carmen.css" />
+
+</head>
+<body>
+	<div id="moon">
+		<img src="images/moon.png" />
+	</div>
+	<h1>
+		<a href="projects.html">&lt; Carmen Alvarez</a>
+	</h1>
+	<h2>Nounours for Linux</h2>
+	<div>
+		<p>
+			Nounours for Linux is based on <a
+				href="https://play.google.com/store/apps/details?id=ca.rmen.nounours">the
+				app I created for Android</a> and iPhone, but is rewritten in C for
+			Linux (using the X11 API), and offers a standalone app as well as a
+			screensaver (integrated with xscreensaver).
+		</p>
+		<div>&nbsp;</div>
+		<div>
+			<input alt="" src="images/projects/screensaverconfig.png"
+				style="width: 1016px; height: 763px;" type="image" />
+		</div>
+		<div>&nbsp;</div>
+		<div>As with the Android app and Live Wallpapers, Nounours for
+			Linux has several themes, including a theme featuring the Android
+			robot. &nbsp;</div>
+		<div>&nbsp;</div>
+		<div>The app and screensaver may be launched by searching for
+			Nounours in Unity, or in the Games menu in Gnome Classic.</div>
+		<div>
+			<input alt="" src="images/projects/unity.png"
+				style="width: 1019px; height: 374px;" type="image" />
+		</div>
+		<div>&nbsp;</div>
+		<div>The command-line for the app offers more options, to
+			resize, stretch, or launch with multiple bears (like the
+			screensaver).</div>
+		<div>&nbsp;</div>
+		<div>The standalone app:</div>
+		<div>
+			<input alt="" src="images/projects/standalone.png"
+				style="width: 1017px; height: 764px;" type="image" />
+		</div>
+		<div>&nbsp;</div>
+		<div>The screensaver can be configured to have multiple
+			characters on the screen. The settings also allow you to set how long
+			until the bear (or robot) falls asleep.&nbsp;</div>
+		<div>
+			<input alt="" src="images/projects/screensaverconfig3.png"
+				style="width: 580px; height: 409px;" type="image" />
+		</div>
+		<div>&nbsp;</div>
+		<div>The screensaver configured with 55 little Android robots:</div>
+		<div>
+			<input alt="" src="images/projects/screensaverrobots.png"
+				type="image" />
+		</div>
+		<div>&nbsp;</div>
+		<div>&nbsp;</div>
+		<h2>I want it! How do I get it?</h2>
+		<h4>The easiest way (but no automatic updates):</h4>
+		<div>Download the debian package:</div>
+		<div>
+			<a href="files/nounours_1.0-1_i386.deb">nounours_1.0-1_i386.deb</a>
+		</div>
+		<div>or</div>
+		<div>
+			<a href="files/nounours_1.0-1_amd64.deb">nounours_1.0-1_amd64.deb</a>
+		</div>
+		<div>&nbsp;</div>
+		<div>Depending on your system, you may be able to install it
+			just by opening the downloaded deb file.</div>
+		<div>&nbsp;</div>
+		<div>Otherwise, install it with:</div>
+		<div>
+			<span style="color: #ee82ee;"><em>sudo dpkg -i
+					nounours_1.0-1_i386.deb&nbsp;</em></span>
+		</div>
+		<div>or</div>
+		<div>
+			<span style="color: #ee82ee;"><em>sudo dpkg -i
+					nounours_1.0-1_amd64.deb</em></span>
+		</div>
+		<h4>To automatically get all the future wonderful updates (see
+			the Todo list below):</h4>
+		<div>If you are on Ubuntu (or use apt):</div>
+		<div>&nbsp;</div>
+		<div>1) In Ubuntu (and possibly other systems), you&#39;ll need
+			to add my certificate in order to add my repository to your system:</div>
+		<div>
+			&nbsp;wget -O - <a href="files/carmen.key.pub"
+				title="files/carmen.key.pub">http://rmen.ca/files/carmen.key.pub</a>
+			|sudo apt-key add -
+		</div>
+		<div>&nbsp;</div>
+		<div>
+			2) Add my repository to your system: &nbsp; <em><span
+				style="color: #ee82ee;">http://rmen.ca rmen_static/repo</span></em>
+		</div>
+		<div>&nbsp;</div>
+		<div>There are a couple of ways to add it:</div>
+		<div>
+			a) Add this line to your /etc/apt/sources.list: <em><span
+				style="color: #ee82ee;">deb <a href="http://rmen.ca"
+					title="http://rmen.ca">http://rmen.ca</a> rmen_static/repo
+			</span></em>
+		</div>
+		<div>
+			b) Or add <em><span style="color: #ee82ee;">http://rmen.ca
+					rmen_static/repo</span></em> in Synaptic Package Manager
+			(Settings-&gt;Repositories-&gt;Other Software).
+		</div>
+		<div>&nbsp;</div>
+		<h2>Source code</h2>
+		<div>
+			The source code is available on GitHub (licensed under GPL):&nbsp;<a
+				href="https://github.com/caarmen/nounours">https://github.com/caarmen/nounours</a>
+		</div>
+		<h2>Todo list</h2>
+		<p>There are a couple of things I&#39;d like to do:</p>
+		<p>* Package it in an RPM to make it easier to install on other
+			Linux distributions</p>
+		<p>* Create an applet like Wanda the Fish</p>
+	</div>
+</body>
+</html>

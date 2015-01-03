@@ -1,0 +1,408 @@
+#VRML V2.0 utf8
+
+PROTO BlackKey
+[]
+{
+	Transform
+	{
+		translation 0 .15 1.7
+		children
+		[
+			Shape
+			{
+				appearance	Appearance{material Material {diffuseColor 0 0 0 shininess 1}}
+				geometry	Box{ size .4 1.3 3.4}
+			}
+		]
+	}
+
+}
+PROTO WhiteKey
+[]
+{
+	Transform
+	{
+		translation .425 0 4.5
+		children
+		[
+			Shape
+			{
+				appearance	Appearance{material Material {diffuseColor 1 1 1 shininess 1}}
+				geometry	Box{ size .85 1 2}
+			}
+		]
+	}
+}
+PROTO HighCKey
+[]
+{
+	Transform
+	{
+		translation .425 0 2.75
+		children
+		[
+			Shape
+			{
+				appearance	Appearance{material Material {diffuseColor 1 1 1 shininess 1}}
+				geometry	Box{ size .85 1 5.5}
+			}
+		]
+	}
+}
+
+PROTO EBKey
+[]
+{
+	Transform
+	{
+		children
+		[
+			WhiteKey{}
+			Transform
+			{
+				translation .575 0 1.75
+				children
+				[
+					Shape
+					{
+						geometry	Box{size .55 1 3.5}
+						appearance Appearance{material Material {diffuseColor 1 1 1 shininess 1}}
+					}
+				]
+			}
+		]
+	}
+}
+PROTO CFKey
+[]
+{
+	Transform
+	{
+		children
+		[
+			WhiteKey{}
+			Transform
+			{
+				translation .275 0 1.75
+				children
+				[
+					Shape
+
+					{
+						geometry	Box{size .55 1 3.5}
+						appearance	Appearance{material Material {diffuseColor 1 1 1 shininess 1}}
+					}
+				]
+			}
+		]
+	}
+}
+
+PROTO DGAKey
+[]
+{
+	Transform
+	{
+		children
+		[
+			WhiteKey{}
+			Transform
+			{
+				translation .425 0 1.75
+				children
+				[
+					Shape
+
+					{
+						geometry	Box{size .45 1 3.5}
+						appearance	Appearance{material Material {diffuseColor 1 1 1}}
+					}
+				]
+			}
+		]
+	}
+}
+
+PROTO KeyScript
+[
+	field SFNode ts TimeSensor{}
+	field SFNode trans Transform{}
+	field SFString key ""
+	eventIn SFBool keyIsPressed
+	eventIn SFTime tsTime
+	eventOut SFRotation rotation
+	eventOut MFString soundUrl
+	eventOut SFTime played
+]
+{
+			Shape { geometry DEF DaText Text {fontStyle FontStyle{size 4} }}
+
+
+	DEF KeyActions Script
+	{
+		field SFNode ts TimeSensor{}
+		field SFString key ""
+		field SFNode keyContainer Transform{}
+		field SFNode cfKey CFKey{}
+		field SFNode ebKey EBKey{}
+		field SFNode dgaKey DGAKey{}
+		field SFNode blackKey BlackKey{}
+		field SFNode highCKey HighCKey{}
+		eventIn SFBool keyIsPressed
+		eventIn SFTime tsTime
+		eventOut MFString soundUrl
+		eventOut SFTime played
+		eventOut SFRotation rotation
+		eventOut MFString string
+
+		key IS key
+		ts IS ts
+		keyContainer IS trans
+		rotation IS rotation
+		soundUrl IS soundUrl
+		keyIsPressed IS keyIsPressed
+		tsTime IS tsTime
+		played IS played
+
+
+		url "javascript:
+			function initialize()
+			{
+				key = key.toLowerCase()
+				soundUrl[0] = '/carmen/apartment/sounds/' + key +'.wav'
+
+				c = key.charAt(0)
+
+				if(key.indexOf('sharp') <0)
+				{
+
+					if(c == 'c' || c == 'f')
+					{
+						if(key.charAt(1)=='7')
+							n = new MFNode(highCKey)
+						else
+							n = new MFNode(cfKey);
+					}
+					else if(c == 'e' || c == 'b')
+						n = new MFNode(ebKey);
+					else if(c == 'd' || c == 'g' || c == 'a')
+					{
+						if(key.indexOf('minus')<0)
+							n = new MFNode(dgaKey);
+						else
+							n = new MFNode(cfKey);
+					}
+					keyContainer.addChildren = n
+				}
+				else
+				{
+					n = new MFNode(blackKey)
+					keyContainer.addChildren = n
+				}
+			}
+			function keyIsPressed(value)
+			{
+				if(value == TRUE)
+				{
+					played = ts.time
+					rotation = new SFRotation(1,0,0,.09066)
+				}
+				else
+				{
+					rotation = new SFRotation(0,0,0,0)
+				}
+			}"
+
+	}
+	ROUTE KeyActions.string TO DaText.string
+
+
+}
+
+
+PROTO Key
+[
+	field SFVec3f pos 0 0 0
+	field SFRotation rotation 0 0 0 0
+	field SFString pkey "C0"
+]
+{
+
+	Transform
+	{
+		translation IS pos
+		rotation IS rotation
+		children
+		[
+
+			Sound
+			{
+				source	DEF KeySound AudioClip
+				{
+					url	""
+					#stopTime 1
+				}
+
+				minFront	1000
+				maxFront	1000
+				minBack	1000
+				maxBack	1000
+			}
+			DEF TimeSource TimeSensor{}
+			DEF TheTransform Transform
+			{
+				children
+				[
+					DEF Clicker TouchSensor {}
+					DEF TimeSource TimeSensor { loop TRUE}
+
+				]
+			}
+			DEF TheScript KeyScript
+			{
+				trans USE TheTransform
+				key IS pkey
+				ts USE TimeSource
+			}
+		]
+	ROUTE TheScript.rotation TO TheTransform.rotation
+	ROUTE TheScript.played TO KeySound.startTime
+	ROUTE Clicker.isActive TO TheScript.keyIsPressed
+	ROUTE TimeSource.time TO TheScript.tsTime
+	ROUTE TheScript.soundUrl TO KeySound.url
+
+	}
+
+}
+
+
+PROTO Keyboard
+[
+	field SFVec3f pos 0 0 0
+	field SFRotation rot 0 0 0 0
+]
+{
+	Transform
+	{
+		translation 1.8 0 0
+		children
+		[
+
+			Transform
+			{
+				translation IS pos
+				rotation IS rot
+
+				children
+				[
+					Key{ pos -1.8 0 0 pkey "AMinus1"}
+					Key{ pos -.9075 0 0 pkey "ASharpMinus1"}
+					Key{ pos -.9 0 0 pkey "BMinus1"}
+					Key{ pos 0 0 0 pkey "C0"}
+					Key{ pos .825 0 0 pkey "CSharp0"}
+					Key{ pos .9 0 0 pkey "D0"}
+					Key{ pos 1.725 0 0 pkey "DSharp0"}
+					Key{ pos 1.8 0 0 pkey "E0"}
+					Key{ pos 2.7 0 0 pkey "F0"}
+					Key{ pos 3.525 0 0 pkey "FSharp0"}
+					Key{ pos 3.6 0 0 pkey "G0"}
+					Key{ pos 4.425 0 0 pkey "GSharp0"}
+					Key{ pos 4.5 0 0 pkey "A0"}
+					Key{ pos 5.375 0 0 pkey "ASharp0"}
+					Key{ pos 5.4 0 0 pkey "B0"}
+					Key{ pos 6.3 0 0 pkey "C1"}
+
+					Key{ pos 7.125 0 0 pkey "CSharp1"}
+					Key{ pos 7.2 0 0 pkey "D1"}
+					Key{ pos 8.025 0 0 pkey "DSharp1"}
+					Key{ pos 8.1 0 0 pkey "E1"}
+					Key{ pos 9.0 0 0 pkey "F1"}
+					Key{ pos 9.825 0 0 pkey "FSharp1"}
+					Key{ pos 9.9 0 0 pkey "G1"}
+					Key{ pos 10.725 0 0 pkey "GSharp1"}
+					Key{ pos 10.8 0 0 pkey "A1"}
+					Key{ pos 11.625 0 0 pkey "ASharp1"}
+					Key{ pos 11.7 0 0 pkey "B1"}
+					Key{ pos 12.6 0 0 pkey "C2"}
+
+					Key{ pos 13.425 0 0 pkey "CSharp2"}
+					Key{ pos 13.5 0 0 pkey "D2"}
+					Key{ pos 14.325 0 0 pkey "DSharp2"}
+					Key{ pos 14.4 0 0 pkey "E2"}
+					Key{ pos 15.3 0 0 pkey "F2"}
+					Key{ pos 16.125 0 0 pkey "FSharp2"}
+					Key{ pos 16.2 0 0 pkey "G2"}
+					Key{ pos 17.025 0 0 pkey "GSharp2"}
+					Key{ pos 17.1 0 0 pkey "A2"}
+					Key{ pos 17.925 0 0 pkey "ASharp2"}
+					Key{ pos 18.0 0 0 pkey "B2"}
+					Key{ pos 18.9 0 0 pkey "C3"}
+
+					Key{ pos 19.725 0 0 pkey "CSharp3"}
+					Key{ pos 19.8 0 0 pkey "D3"}
+					Key{ pos 20.625 0 0 pkey "DSharp3"}
+					Key{ pos 20.7 0 0 pkey "E3"}
+					Key{ pos 21.6 0 0 pkey "F3"}
+					Key{ pos 22.425 0 0 pkey "FSharp3"}
+					Key{ pos 22.5 0 0 pkey "G3"}
+					Key{ pos 23.325 0 0 pkey "GSharp3"}
+					Key{ pos 23.4 0 0 pkey "A3"}
+					Key{ pos 24.225 0 0 pkey "ASharp3"}
+					Key{ pos 24.3 0 0 pkey "B3"}
+					Key{ pos 25.2 0 0 pkey "C4"}
+
+					Key{ pos 26.025 0 0 pkey "CSharp4"}
+					Key{ pos 26.1 0 0 pkey "D4"}
+					Key{ pos 26.925 0 0 pkey "DSharp4"}
+					Key{ pos 27.0 0 0 pkey "E4"}
+					Key{ pos 27.9 0 0 pkey "F4"}
+					Key{ pos 28.725 0 0 pkey "FSharp4"}
+					Key{ pos 28.8 0 0 pkey "G4"}
+					Key{ pos 29.625 0 0 pkey "GSharp4"}
+					Key{ pos 29.7 0 0 pkey "A4"}
+					Key{ pos 30.525 0 0 pkey "ASharp4"}
+					Key{ pos 30.6 0 0 pkey "B4"}
+					Key{ pos 31.5 0 0 pkey "C5"}
+
+					Key{ pos 32.325 0 0 pkey "CSharp5"}
+					Key{ pos 32.4 0 0 pkey "D5"}
+					Key{ pos 33.225 0 0 pkey "DSharp5"}
+					Key{ pos 33.3 0 0 pkey "E5"}
+					Key{ pos 34.2 0 0 pkey "F5"}
+					Key{ pos 35.025 0 0 pkey "FSharp5"}
+					Key{ pos 35.1 0 0 pkey "G5"}
+					Key{ pos 35.925 0 0 pkey "GSharp5"}
+					Key{ pos 36.0 0 0 pkey "A5"}
+					Key{ pos 36.825 0 0 pkey "ASharp5"}
+					Key{ pos 36.9 0 0 pkey "B5"}
+					Key{ pos 37.8 0 0 pkey "C6"}
+
+					Key{ pos 38.625 0 0 pkey "CSharp6"}
+					Key{ pos 38.7 0 0 pkey "D6"}
+					Key{ pos 39.525 0 0 pkey "DSharp6"}
+					Key{ pos 39.6.0 0 pkey "E6"}
+					Key{ pos 40.5 0 0 pkey "F6"}
+					Key{ pos 41.325 0 0 pkey "FSharp6"}
+					Key{ pos 41.4 0 0 pkey "G6"}
+					Key{ pos 42.225 0 0 pkey "GSharp6"}
+					Key{ pos 42.3 0 0 pkey "A6"}
+					Key{ pos 43.125 0 0 pkey "ASharp6"}
+					Key{ pos 43.2 0 0 pkey "B6"}
+					Key{ pos 44.1 0 0 pkey "C7"}
+
+				]
+			}
+		]
+	}
+}
+
+Transform
+{
+	scale .254 .254 .254
+	children
+	[
+
+		Keyboard{pos -20 0 0 rot 1 0 0 .38}
+	]
+}
+

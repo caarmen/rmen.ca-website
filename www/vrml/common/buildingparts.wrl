@@ -1,0 +1,267 @@
+#VRML V2.0 utf8
+
+
+
+PROTO Wall
+[
+	field SFVec3f wsize 0 0 0
+	field SFVec3f wpos 0 0 0
+]
+{
+	Transform
+	{
+		translation IS wpos
+
+		children
+		[
+			Shape
+			{
+				geometry Box {size IS wsize }
+				appearance Appearance
+				{
+					material Material { diffuseColor 1 1 1 }
+				}
+			}
+		]
+	}
+}
+
+PROTO Door
+[
+	field SFVec3f dsize 0 0 0
+	field SFVec3f foo 0 0 0
+	field SFVec3f dpos 0 0 0
+	field SFImage img 1 1 1 0xDDDDDD
+	field SFBool clockwise TRUE
+	field SFString dorientation "north"
+	field SFBool closed TRUE
+	field SFInt32 angle 45
+	field MFString texture "white1.GIF"
+	field SFFloat sizeKnob 1.0
+]
+{
+
+
+	DEF tmp Transform
+	{
+		translation IS dpos
+		
+		
+		
+
+		children
+		[
+
+			DEF Clicker TouchSensor {}
+			Shape { geometry DEF DaResult Text {fontStyle FontStyle{size 40} } }
+
+
+			Sound
+			{
+				source	DEF DoorSlam AudioClip
+				{
+					url	"../sounds/doorslam.wav"
+					stopTime 1
+				}
+
+				minFront	1000
+				maxFront	1000
+				minBack	1000
+				maxBack	1000
+			}
+			Sound
+			{
+				source DEF DoorOpen AudioClip
+				{
+					url "../sounds/dooropen.wav"
+					stopTime 1
+				}
+				minFront	1000
+				maxFront	1000
+				minBack	1000
+				maxBack	1000
+
+			}
+
+			DEF frontDoor Transform
+			{
+				children
+				[
+					Shape
+					{
+						geometry DEF daBox Box {size IS dsize}
+						appearance Appearance
+						{
+							texture DEF TheTexture ImageTexture
+							{
+								url IS texture
+								repeatS TRUE repeatT TRUE
+							}
+
+							material Material{}
+
+						#	texture PixelTexture { image IS img}
+						}
+					}
+					DEF knob1 Transform
+					{
+						children
+						[
+							Shape
+							{
+								geometry Sphere { radius IS sizeKnob}
+								appearance Appearance
+								{
+									material Material { diffuseColor .8 .8 0 shininess 1}
+								}
+							}
+						]
+					}
+					
+					DEF knob2 Transform
+					{
+						#translation -16 0 -1.5
+						children
+						[
+							Shape
+							{
+								geometry Sphere { radius IS sizeKnob}
+								appearance Appearance
+								{
+									material Material { diffuseColor .8 .8 0 shininess 1 }
+								}
+							}
+						]
+					}
+				]
+			}
+
+
+		]
+	}
+	DEF RotateDoor Script
+	{
+		eventIn  SFTime touchTime
+		field SFBool closed TRUE
+		eventOut SFRotation rot
+		eventIn SFVec3f inTranslation
+		eventOut SFVec3f outTranslation
+		eventOut MFString string
+		field SFVec3f size 0 0 0
+		field SFBool rot_clockwise TRUE
+		field SFVec3f rot_axis 0 0 0
+		field SFString orient "north"
+		field SFFloat rad 0
+		field SFInt32 angle 45
+		eventOut SFVec3f knob1pos
+		eventOut SFVec3f knob2pos
+		eventOut SFTime doorClosed
+		eventOut SFTime doorOpened
+		field SFFloat sizeKnob IS sizeKnob
+
+
+
+		size IS dsize
+		rot_clockwise IS clockwise
+		orient IS dorientation
+		closed IS closed
+		angle IS angle
+
+		url "javascript:
+			function initialize()
+			{
+
+				rad = angle * Math.PI / 180
+				if(orient == 'west')
+				{
+					knob1pos = new SFVec3f(2*sizeKnob-size[0]/2,0,-size[2])
+					knob2pos = new SFVec3f(2*sizeKnob-size[0]/2,0,size[2])
+				}
+				else if(orient == 'north')
+				{
+					knob1pos = new SFVec3f(-size[0],0,2*sizeKnob-size[2]/2)
+					knob2pos = new SFVec3f(size[0],0,2*sizeKnob-size[2]/2)
+				}
+				else if(orient == 'east')
+				{
+					knob1pos = new SFVec3f(size[0]/2-2*sizeKnob,0,-size[2])
+					knob2pos = new SFVec3f(size[0]/2-2*sizeKnob,0,size[2])
+				}
+				else if(orient == 'south')
+				{
+					knob1pos = new SFVec3f(size[0],0,size[2]/2-2*sizeKnob)
+					knob2pos = new SFVec3f(-size[0],0,size[2]/2-2*sizeKnob)
+				}
+				if(closed == FALSE)
+				{
+					closed = TRUE
+					touchTime()
+				}
+			}
+			function touchTime(value)
+			{
+
+				if(closed == FALSE)
+				{
+					doorClosed = value
+					closed = TRUE;
+					rot = new SFRotation(0,1,0,0);
+					outTranslation = new SFVec3f(0,0,0);
+				}
+				else
+				{
+					doorOpened = value
+					closed = FALSE;
+					if(rot_clockwise == FALSE)
+						rot = new SFRotation(0,1,0,rad);
+					else
+						rot = new SFRotation(0,1,0,-rad);
+					dX = Math.sin(rad)
+					dY = 1-Math.cos(rad)
+					if(orient == 'west')
+					{
+						if(rot_clockwise == TRUE)
+							outTranslation = new SFVec3f(dY*size[0]/2,0,size[0]/2*(-dX))
+						else
+							outTranslation = new SFVec3f(dY*size[0]/2,0,size[0]/2*dX)
+					}
+					else if(orient == 'east')
+					{
+						if(rot_clockwise == TRUE)
+							outTranslation = new SFVec3f(0-dY*size[0]/2,0,size[0]/2*dX)
+						else
+							outTranslation = new SFVec3f(0-dY*size[0]/2,0,size[0]/2*(-dX))
+					}
+					else if(orient == 'south')
+					{
+						if(rot_clockwise == TRUE)
+							outTranslation = new SFVec3f(size[2]/2*(-dX),0,0-dY*size[2]/2)
+						else
+							outTranslation = new SFVec3f(size[2]/2*dX,0,0-dY*size[2]/2)
+					}
+					else if(orient == 'north')
+					{
+						if(rot_clockwise == TRUE)
+							outTranslation = new SFVec3f(size[2]/2*dX,0,dY*size[2]/2);
+						else
+							outTranslation = new SFVec3f(size[2]/2*(-dX),0,dY*size[2]/2)
+					}
+				}
+
+			}
+			"
+	}
+	ROUTE frontDoor.translation TO RotateDoor.inTranslation
+	ROUTE Clicker.touchTime TO RotateDoor.touchTime
+	ROUTE RotateDoor.rot TO frontDoor.rotation
+	ROUTE RotateDoor.outTranslation TO frontDoor.translation
+	ROUTE RotateDoor.string TO DaResult.string
+	ROUTE RotateDoor.knob1pos TO knob1.translation
+	ROUTE RotateDoor.knob2pos TO knob2.translation
+	ROUTE RotateDoor.doorClosed TO DoorSlam.startTime
+	ROUTE RotateDoor.doorOpened TO DoorOpen.startTime
+
+}
+
+
+

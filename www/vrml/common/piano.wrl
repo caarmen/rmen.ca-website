@@ -1,0 +1,65 @@
+#VRML V2.0 utf8
+EXTERNPROTO Keyboard
+[
+	field SFVec3f pos
+	field SFRotation rot
+]
+"keys.wrl#Keyboard"
+
+EXTERNPROTO Panel
+[
+	field SFVec3f size
+	field SFVec3f position
+	field MFString texture
+]
+"desk.wrl#Panel"
+
+PROTO Piano
+[
+	field SFVec3f pos 0 0 0
+	field SFRotation rotation 0 0 0 0
+	field SFVec3f pscale 1.0 1.0 1.0
+]
+{
+	Transform
+	{
+		translation IS pos
+		rotation IS rotation
+		scale IS pscale
+		children
+		[
+			Transform
+			{
+				children
+				[
+					Keyboard{ pos 3.6 0.5 12 }
+					Panel{ size 54 1 18 position 27 -.5 9 texture "../textures/black.gif"}
+					Panel{ size 3.5 1.5 18 position 1.75 0.75 9 texture "../textures/black.gif"}
+					Panel{ size 3.5 1.5 18 position 52.25 0.75 9 texture "../textures/black.gif"}
+					Panel{ size 47 2 12 position 27 1 6 texture "../textures/black.gif"}
+					Panel{ size 1 1 12 position 4.5 -1.5 10 texture "../textures/black.gif"}
+					Panel{ size 1 1 12 position 49.5 -1.5 10 texture "../textures/black.gif"}
+					Panel{ size 1 23 12 position 4.5 -12.5 10 texture "../textures/black.gif"}
+					Panel{ size 1 23 12 position 49.5 -12.5 10 texture "../textures/black.gif"}
+					Panel{ size 2 1 18 position 4.5 -24 11 texture "../textures/black.gif"}
+					Panel{ size 2 1 18 position 49.5 -24 11 texture "../textures/black.gif"}
+					Panel{ size 44 6 .5 position 27 -8 8.5 texture "../textures/black.gif"}
+
+				]
+			}
+		]
+	}
+
+}
+Transform
+{
+	children
+	[
+		Background
+		{
+			groundColor 1 1 1
+			skyColor 1 1 1
+		}
+		Piano{}
+	]
+}
