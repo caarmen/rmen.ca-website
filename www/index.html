@@ -7,8 +7,25 @@
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="carmen.css" />
 
+  <script language="javascript">
+   <!--
+// https://stackoverflow.com/questions/9038625/detect-if-device-is-ios
+function iOS() {
+  return (/iPad|iPhone|iPod/.test(navigator.platform) ||
+(navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
+!window.MSStream
+}
+
+function hideGooglePlay() {
+  if (iOS()) {
+    document.getElementById("googleplay").style.display = "none";
+    document.getElementById("projects").style.display = "none";
+  }
+}
+  -->
+  </script>
 </head>
-<body>
+<body onload="hideGooglePlay()">
 	<div id="moon">
 		<img src="images/moon.png" />
 	</div>
@@ -22,7 +39,7 @@
 		multitrack videos (original songs, covers, classical music...) on <a
 			href="https://www.youtube.com/user/carmen75013">YouTube</a>.
 	</p>
-	<p>
+	<p id="googleplay">
 		<a
 			href="https://play.google.com/store/apps/developer?id=Carmen+Alvarez"><img
 			alt="Google Play Store" class="icon" src="images/icon-playstore.png" /></a>Download
@@ -35,7 +52,7 @@
 			class="icon" src="images/icon-github.png" /></a>Checkout my projects on <a
 			href="https://github.com/caarmen">GitHub</a>.
 	</p>
-	<p>
+	<p id="projects">
 		<a href="projects.html"><img alt="Other projects" class="icon"
 			src="images/icon-projects.png" /></a>Some other <a href="projects.html">code projects</a>.
 	</p>
