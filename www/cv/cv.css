@@ -1,0 +1,168 @@
+:root {
+    --mdc-theme-primary:#3e0470;
+    --mdc-theme-secondary: #455A64;
+    --mdc-theme-surface:#fcfafc;
+    --mdc-theme-text-primary-on-light: #212121;
+    --mdc-theme-text-secondary-on-light: #727272;
+    --mdc-theme-text-icon-on-light:#3e0470;
+    --sub-header-1: #eaeef0;
+    --app-bar-row-height: 64px;
+}
+@media print {
+    .pagebreak { 
+        page-break-before: always; 
+        padding-bottom: 64px;
+    } /* page-break-after works, as well */
+}
+html {
+    font-family: var(--mdc-typography-subtitle1-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+    width: 21cm;
+}
+body {
+    margin: 0px;
+    background-color: white;
+}
+.panel-title {
+    font-weight: bold;
+    color: var(--mdc-theme-primary);
+    margin: 24px;
+}
+.panel-summary {
+    width: 8cm;
+}
+.mdc-top-app-bar {
+    width: 21cm;
+}
+.avatar {
+    width: 48px;
+    border-radius: 50%;
+}
+.content {
+    display: table-row;
+}
+.panel-summary{
+    display: table-cell;
+}
+.panel-experiences {
+    display: table-cell;
+}
+.mdc-card {
+    margin: 16px;
+}
+.card-content {
+    padding: 16px;
+}
+.key-attributes, .contact, .apps-items {
+    display: table;
+}
+.key-attribute, .contact-item, .app-item {
+    display: table-row;
+    height: 32px;
+}
+.key-attribute-icon, .contact-item-icon, .app-item-icon {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 36px;
+}
+.contact-item-icon img, .app-item-icon img {
+    width: 16px;
+    height: 16px;
+}
+.key-attribute-text, .contact-item-text, .app-item-text{
+    display: table-cell;
+    vertical-align: middle;
+}
+.principle:before {
+    font-family: "Material Icons";
+    content:"chevron_right";
+}
+.skills-item:before {
+    font-family: "Material Icons";
+    content:"chevron_right";
+}
+.experience-title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.experience-company {
+    font-weight: bold;
+}
+.experience-company-logo img {
+    height: 48px;
+    margin-bottom: 8px;
+    margin-inline-end: 16px;
+}
+.experience-description {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.experience-skills {
+    font-size: 0.6em;
+    color: var(--mdc-theme-text-secondary-on-light);
+}
+.experience-location, .experience-dates, .experience-team-size {
+    font-size: 0.8em;
+}
+.experience-location:before{
+    font-family: "Material Icons";
+    content:"fmd_good";
+    margin: 4px;
+    color: var(--mdc-theme-text-icon-on-light);
+}
+.experience-dates:before{
+    font-family: "Material Icons";
+    content:"calendar_today";
+    margin: 4px;
+    color: var(--mdc-theme-text-icon-on-light);
+}
+.experience-team-size:before{
+    font-family: "Material Icons";
+    content:"group";
+    margin: 4px;
+    color: var(--mdc-theme-text-icon-on-light);
+}
+.experience-skills:before{
+    font-family: "Material Icons";
+    content:"construction";
+    margin: 4px;
+    color: var(--mdc-theme-text-icon-on-light);
+}
+.education-item:before {
+    font-family: "Material Icons";
+    content:"school";
+    margin: 4px;
+    color: var(--mdc-theme-text-icon-on-light);
+}
+
+.card-content .mdc-list-item, .card-content .mdc-list--two-line.mdc-list--icon-list .mdc-list-item {
+    min-height: 64px;
+    height: max-content;
+}
+.mdc-list-item__graphic img{
+    width: 24px;
+    height: 24px;
+}
+.card-content .mdc-list-item__primary-text, .card-content .mdc-list-item__secondary-text {
+    white-space: normal;
+}
+.material-icons {
+    color: var(--mdc-theme-text-icon-on-light);
+}
+.card-title {
+    align-items: center;
+    display: inline-flex; 
+}
+.card-title img {
+    width: 48px;
+    border-radius: 50%;
+    background-color: var(--mdc-theme-primary);
+    margin-inline-end: 8px;
+}
+.card-title img {
+    width: 32px;
+    height: 32px;
+}
+.app-stores {
+    font-size: 0.6em;
+}
