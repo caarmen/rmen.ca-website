@@ -42,30 +42,35 @@ body {
 }
 .panel-summary{
     display: table-cell;
+    padding-right: 16px;
 }
 .panel-experiences {
     display: table-cell;
 }
 .mdc-card {
-    margin: 16px;
+    margin-bottom: 16px;
+}
+.mdc-card .mdc-list-item {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .card-content {
     padding: 16px;
 }
-.key-attributes, .contact, .apps-items {
+.key-attributes, .apps-items {
     display: table;
 }
-.key-attribute, .contact-item, .app-item {
+.key-attribute, .app-item {
     display: table-row;
     height: 32px;
 }
-.key-attribute-icon, .contact-item-icon, .app-item-icon {
+.key-attribute-icon, .app-item-icon {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
     width: 36px;
 }
-.contact-item-icon img, .app-item-icon img {
+.key-attribute-icon img, .app-item-icon img {
     width: 16px;
     height: 16px;
 }
