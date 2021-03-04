@@ -25,7 +25,8 @@ body {
 .panel-title {
     font-weight: bold;
     color: var(--mdc-theme-primary);
-    margin: 24px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 .panel-summary {
     width: 8cm;
@@ -78,14 +79,6 @@ body {
     display: table-cell;
     vertical-align: middle;
 }
-.principle:before {
-    font-family: "Material Icons";
-    content:"chevron_right";
-}
-.skills-item:before {
-    font-family: "Material Icons";
-    content:"chevron_right";
-}
 .experience-title {
     font-size: 1.3em;
     font-weight: bold;
@@ -94,7 +87,7 @@ body {
     font-weight: bold;
 }
 .experience-company-logo img {
-    height: 48px;
+    height: 36px;
     margin-bottom: 8px;
     margin-inline-end: 16px;
 }
@@ -127,12 +120,6 @@ body {
     margin: 4px;
     color: var(--mdc-theme-text-icon-on-light);
 }
-.experience-skills:before{
-    font-family: "Material Icons";
-    content:"construction";
-    margin: 4px;
-    color: var(--mdc-theme-text-icon-on-light);
-}
 .education-item:before {
     font-family: "Material Icons";
     content:"school";
@@ -140,7 +127,7 @@ body {
     color: var(--mdc-theme-text-icon-on-light);
 }
 
-.card-content .mdc-list-item, .card-content .mdc-list--two-line.mdc-list--icon-list .mdc-list-item {
+.card-content .mdc-list--two-line.mdc-list--icon-list .mdc-list-item {
     min-height: 64px;
     height: max-content;
 }
@@ -148,7 +135,7 @@ body {
     width: 24px;
     height: 24px;
 }
-.card-content .mdc-list-item__primary-text, .card-content .mdc-list-item__secondary-text {
+.card-content .mdc-list-item__primary-text, .card-content .mdc-list-item__secondary-text, .card-content .mdc-list-item__text {
     white-space: normal;
 }
 .material-icons {
