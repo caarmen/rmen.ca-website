@@ -18,6 +18,9 @@ html {
     font-family: var(--mdc-typography-subtitle1-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
     width: 21cm;
 }
+a:link,a.active:link, a:hover, a:visited {
+	color: var(--mdc-theme-text-secondary-on-light);
+}
 body {
     margin: 0px;
     background-color: white;
@@ -30,6 +33,9 @@ body {
 }
 .panel-summary {
     width: 8cm;
+}
+.mdc-chip {
+    font-size: 0.8em;
 }
 .mdc-top-app-bar {
     width: 21cm;
@@ -48,10 +54,10 @@ body {
 .panel-experiences {
     display: table-cell;
 }
-.mdc-card {
+.mdc-card--outlined {
     margin-bottom: 16px;
 }
-.mdc-card .mdc-list-item {
+.mdc-card--outlined .mdc-list-item {
     padding-left: 0px;
     padding-right: 0px;
 }
