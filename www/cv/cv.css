@@ -11,7 +11,7 @@
 @media print {
     .pagebreak { 
         page-break-before: always; 
-        padding-bottom: 64px;
+        padding-bottom: 48;
     } /* page-break-after works, as well */
 }
 html {
@@ -92,6 +92,11 @@ body {
 .experience-company {
     font-weight: bold;
 }
+.experience-company-description {
+    color: var(--mdc-theme-text-secondary-on-light);
+    font-style: italic;
+    margin-bottom: 16px;
+}
 .experience-company-logo img {
     height: 32px;
     margin-bottom: 8px;
@@ -133,7 +138,7 @@ body {
     color: var(--mdc-theme-text-icon-on-light);
 }
 
-.card-content .mdc-list--two-line.mdc-list--icon-list .mdc-list-item {
+.card-content .mdc-list--two-line.mdc-list--icon-list .mdc-list-item, .mdc-list--two-line .mdc-list-item  {
     min-height: 64px;
     height: max-content;
 }
