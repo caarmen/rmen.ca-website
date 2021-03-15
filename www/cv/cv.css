@@ -11,7 +11,7 @@
 @media print {
     .pagebreak { 
         page-break-before: always; 
-        padding-bottom: 48;
+        padding-bottom: 48px;
     } /* page-break-after works, as well */
 }
 html {
