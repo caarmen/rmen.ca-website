@@ -15,7 +15,7 @@ body {
 }
 .poems article:after, main nav::before, main nav::after {
 	display: block;
-	background: url('images/divider.png');
+	background: url('../images/divider.png');
 	content: " ";
 	height: 69px;
 	width: 377px;
