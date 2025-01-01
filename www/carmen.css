@@ -125,3 +125,6 @@ nav li {
 }
 
 * {}
+#projects {
+	display: none;
+}
