@@ -18,7 +18,7 @@ body {
 	width: 377px;
 	margin-top: 32px;
 }
-.poems article header {
+.poems article h3{
 	color: white;
 	font-weight: bold;
 }
