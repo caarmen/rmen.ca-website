@@ -8,27 +8,28 @@
 </head>
 
 <body>
-    <header>
-        <img class="avatar" src="assets/avatar.jpg" alt="">
-        <div>
-            <div>Carmen Alvarez</div>
-            <div>Software developer -
-                Lyon, France
-            </div>
-            <div class="contact">
-                
-                <div>carmen@rmen.ca</div>
-                
-                <div>GitHub: @caarmen</div>
-                
-            </div>
-        </div>
+    <header class="cv-header">
+        <address class="contact grid-item-start">
+            <div>carmen@rmen.ca</div>
+        </address>
+        <figure>
+            <img class="avatar" src="assets/avatar.jpg" alt="">
+            <figcaption>
+                <div>Carmen Alvarez</div>
+                <div>Software developer -
+                    Lyon, France
+                </div>
+            </figcaption>
+        </figure>
+        <address class="contact grid-item-end">
+            <div>GitHub: @caarmen</div>
+        </address>
     </header>
     <main>
         <div class="summary">Experienced software developer with expertise in backend development using Python and Node.js, alongside a strong foundation in Java desktop and web applications, and Android development with Kotlin. Versatile and adept at adapting to new technologies and domains.</div>
         <div>
             <div>
-                <div class="section-heading">Skills</div>
+                <header class="section-heading">Skills</header>
                 <table>
                     <thead>
                         <tr>
@@ -137,19 +138,19 @@
                     </tbody>
                 </table>
             </div>
-            <div>
-                <div class="section-heading">Experiences</div>
+            <section>
+                <header class="section-heading">Experiences</header>
                 
                 
-                <div class="experience">
-                    <div class="experience-header">
+                <article class="experience">
+                    <header class="experience-header">
                         <div>Genymobile, Lyon, France</div>
                         <div>
                             <span>Mar 2022 - Current
                                 
                             </span>
                         </div>
-                    </div>
+                    </header>
                     <div>
                         <div class="experience-title">Design And Development Engineer (Backend)</div>
                         
@@ -180,16 +181,15 @@
 </li>
                             
                         </ul>
-                        <div class="experience-skills">Django REST framework (DRF), Python, Express (Node.js), AMQP (RabbitMQ), Unit and E2E tests (pytest, Mocha), Swagger/OpenAPI/ReDoc, MariaDB/MySQL, GitHub, Jenkins, Kibana, gateway, GraphQL
-
-                        </div>
+                        <footer class="experience-skills">Django REST framework (DRF), Python, Express (Node.js), AMQP (RabbitMQ), Unit and E2E tests (pytest, Mocha), Swagger/OpenAPI/ReDoc, MariaDB/MySQL, GitHub, Jenkins, Kibana, gateway, GraphQL
+</footer>
                     </div>
-                </div>
+                </article>
                 
                 
                 
-                <div class="experience">
-                    <div class="experience-header">
+                <article class="experience">
+                    <header class="experience-header">
                         <div>Libon, Paris, France</div>
                         <div>
                             <span>Oct 2018 - Feb 2022
@@ -198,7 +198,7 @@
                                 
                             </span>
                         </div>
-                    </div>
+                    </header>
                     <div>
                         <div class="experience-title">Mobile Lead</div>
                         
@@ -227,16 +227,15 @@
 </li>
                             
                         </ul>
-                        <div class="experience-skills">Android Studio/Gradle, Kotlin, Coroutines, MVVM, Modularisation, Androidx/Jetpack, Android Architecture Components, Room, LiveData, Data Binding, Paging, Material, Google Play Billing, Firebase Crashlytics, Linphone, Libphonenumber, Json, Glide, Volley, Mapbox, Brainree, Sripe, GitHub, REST, Junit, Robolectric, Espresso, Mockito, Jenkins pipelines, Jacoco, Detekt, PR, Code Review
-
-                        </div>
+                        <footer class="experience-skills">Android Studio/Gradle, Kotlin, Coroutines, MVVM, Modularisation, Androidx/Jetpack, Android Architecture Components, Room, LiveData, Data Binding, Paging, Material, Google Play Billing, Firebase Crashlytics, Linphone, Libphonenumber, Json, Glide, Volley, Mapbox, Brainree, Sripe, GitHub, REST, Junit, Robolectric, Espresso, Mockito, Jenkins pipelines, Jacoco, Detekt, PR, Code Review
+</footer>
                     </div>
-                </div>
+                </article>
                 
                 
                 
-                <div class="experience">
-                    <div class="experience-header">
+                <article class="experience">
+                    <header class="experience-header">
                         <div>Genymobile, Châtillon, France</div>
                         <div>
                             <span>Aug 2011 - Sep 2018
@@ -245,7 +244,7 @@
                                 
                             </span>
                         </div>
-                    </div>
+                    </header>
                     <div>
                         <div class="experience-title">Design And Development Engineer (Android)</div>
                         
@@ -277,16 +276,15 @@
 </li>
                             
                         </ul>
-                        <div class="experience-skills">Android Studio/Gradle, Eclipse/Maven, Kotlin, Java, C, C++, Shell, Linphone, SIP, RTP, Libphonenumber, Json, Retrofit, RxJava, Firebase Remote Config, Firebase Cloud Messaging (FCM), Crashlytics, Smartling, MVP, REST, Robolectric, Mockito, Wiremock, Gitlab, GitHub, Jenkins, Jacoco, Sonar, Scrum, Pull Request, Code Review
-
-                        </div>
+                        <footer class="experience-skills">Android Studio/Gradle, Eclipse/Maven, Kotlin, Java, C, C++, Shell, Linphone, SIP, RTP, Libphonenumber, Json, Retrofit, RxJava, Firebase Remote Config, Firebase Cloud Messaging (FCM), Crashlytics, Smartling, MVP, REST, Robolectric, Mockito, Wiremock, Gitlab, GitHub, Jenkins, Jacoco, Sonar, Scrum, Pull Request, Code Review
+</footer>
                     </div>
-                </div>
+                </article>
                 
                 
                 
-                <div class="experience">
-                    <div class="experience-header">
+                <article class="experience">
+                    <header class="experience-header">
                         <div>Ariba, Paris, France</div>
                         <div>
                             <span>Oct 2006 - Feb 2011
@@ -295,7 +293,7 @@
                                 
                             </span>
                         </div>
-                    </div>
+                    </header>
                     <div>
                         <div class="experience-title">Senior Consultant</div>
                         
@@ -317,15 +315,14 @@
 </li>
                             
                         </ul>
-                        <div class="experience-skills">Java, Weblogic, Eclipse, Oracle, Maven, Windows, Svn, Perforce
-                        </div>
+                        <footer class="experience-skills">Java, Weblogic, Eclipse, Oracle, Maven, Windows, Svn, Perforce</footer>
                     </div>
-                </div>
+                </article>
                 
                 
                 
-                <div class="experience">
-                    <div class="experience-header">
+                <article class="experience">
+                    <header class="experience-header">
                         <div>ESR, Noisy-le-Grand, France</div>
                         <div>
                             <span>Nov 2004 - Sep 2006
@@ -334,7 +331,7 @@
                                 
                             </span>
                         </div>
-                    </div>
+                    </header>
                     <div>
                         <div class="experience-title">Software Developer/Consultant</div>
                         
@@ -350,10 +347,9 @@
 </li>
                             
                         </ul>
-                        <div class="experience-skills">C++, GCC, GDB, Makefile, Java, SNMP, Linux, CVS
-                        </div>
+                        <footer class="experience-skills">C++, GCC, GDB, Makefile, Java, SNMP, Linux, CVS</footer>
                     </div>
-                </div>
+                </article>
                 
                 
                 
@@ -366,23 +362,23 @@
                 
                 
                 
-            </div>
-            <div class="section-heading">Conferences</div>
-            <div>
+            </section>
+            <section>
+                <header class="section-heading">Conferences</header>
                 <div class="conferences">
                     
                     
-                    <div class="conference">
+                    <article class="conference">
                         <div class="conference-title">Optimizing SQL Queries in Django and SQLAlchemy: Tackling the N+1 Problem with ORMs</div>
                         <div class="conference-conference">PyCon France, Strasbourg, 2024</div>
-                    </div>
+                    </article>
                     
                     
                     
-                    <div class="conference">
+                    <article class="conference">
                         <div class="conference-title">One test suite to test them all, Instrumentation and Robolectric tests</div>
                         <div class="conference-conference">AndroidMakers by droidcon, Paris, 2024</div>
-                    </div>
+                    </article>
                     
                     
                     
@@ -390,11 +386,11 @@
                     
                     
                 </div>
-            </div>
-            <div class="section-heading">Publications</div>
-            <div>
+            </section>
+            <section>
+                <header class="section-heading">Publications</header>
                 
-                <div>
+                <article>
                     <div class="publication-title"><a href="http://clef.isti.cnr.it/2004/working_notes/WorkingNotes2004/61.pdf">Toward Cross-Language and Cross-Media Image Retrieval</a>
                     </div>
                     
@@ -403,16 +399,16 @@
                     </div>
                     
                     <div>Sep 15, 2004, CLEF'04 (Cross-Language Evaluation Forum)</div>
-                </div>
+                </article>
                 
-                <div>
+                <article>
                     <div class="publication-title"><a href="https://papyrus.bib.umontreal.ca/xmlui/bitstream/handle/1866/14552/Alvarez_Carmen_2004_memoire.pdf">Modèles de langue en recherche d’information</a>
                     </div>
                     
                     <div>Apr 29, 2004, Université de Montréal</div>
-                </div>
+                </article>
                 
-                <div>
+                <article>
                     <div class="publication-title"><a href="https://www.iro.umontreal.ca/~felipe/Papers/paper-taln-2004b.pdf">Mots composés dans les modèles de langue pour la recherche d’information</a>
                     </div>
                     
@@ -421,34 +417,36 @@
                     </div>
                     
                     <div>Apr 19, 2004, TALN 2004, Session Poster, Fès, 19–21 avril 2004</div>
+                </article>
+                
+            </section>
+            <section>
+                <header class="section-heading">Education</header>
+                <div class="educations">
+                    
+                    
+                    <article class="education">
+                        <div class="education-degree">Master of Science, Computer Science</div>
+                        <div class="education-institution">Université de Montréal</div>
+                        <div>French equivalent: Bac + 5/6</div>
+                    </article>
+                    
+                    
+                    
+                    <article class="education">
+                        <div class="education-degree">Bachelor of Science, Computer Science</div>
+                        <div class="education-institution">California State Polytechnic University-Pomona</div>
+                        <div>French equivalent: Bac + 4</div>
+                    </article>
+                    
+                    
+                    
+                    
                 </div>
-                
-            </div>
-            <div class="section-heading">Education</div>
-            <div class="educations">
-                
-                
-                <div class="education">
-                    <div class="education-degree">Master of Science, Computer Science</div>
-                    <div class="education-institution">Université de Montréal</div>
-                    <div>French equivalent: Bac + 5/6</div>
-                </div>
-                
-                
-                
-                <div class="education">
-                    <div class="education-degree">Bachelor of Science, Computer Science</div>
-                    <div class="education-institution">California State Polytechnic University-Pomona</div>
-                    <div>French equivalent: Bac + 4</div>
-                </div>
-                
-                
-                
-                
-            </div>
+            </section>
         </div>
-        <div>
-            <div class="section-heading">Principles</div>
+        <section>
+            <header class="section-heading">Principles</header>
             <div class="principles">
                 
                 <div class="principle">Split features into manageable iterations</div>
@@ -466,7 +464,7 @@
                 <div class="principle">Document well for others and for future self</div>
                 
             </div>
-        </div>
+        </section>
     </main>
 </body>
 

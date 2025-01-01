@@ -1,844 +1,472 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Carmen Alvarez</title>
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@10.0.0/dist/material-components-web.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://unpkg.com/material-components-web@10.0.0/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="assets/cv.css">
 </head>
+
 <body>
-<header class="mdc-top-app-bar mdc-top-app-bar--fixed">
-    <div class="mdc-top-app-bar__row">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+    <header class="cv-header">
+        <address class="contact grid-item-start">
+            <div>carmen@rmen.ca</div>
+        </address>
+        <figure>
             <img class="avatar" src="assets/avatar.jpg" alt="">
-            <div>
-                <div class="mdc-top-app-bar__title">Carmen Alvarez</div>
-                <div class="mdc-top-app-bar__title mdc-typography--subtitle1">Développeuse de logiciels -
+            <figcaption>
+                <div>Carmen Alvarez</div>
+                <div>Développeuse de logiciels -
                     Lyon, France
                 </div>
+            </figcaption>
+        </figure>
+        <address class="contact grid-item-end">
+            <div>GitHub : @caarmen</div>
+        </address>
+    </header>
+    <main>
+        <div class="summary">Développeuse logicielle expérimentée avec une expertise en développement backend utilisant Python et Node.js, ainsi qu’une solide expérience en applications desktop et web Java, et en développement Android avec Kotlin. Polyvalente et capable de s’adapter rapidement à de nouvelles technologies et domaines.</div>
+        <div>
+            <div>
+                <header class="section-heading">Compétences</header>
+                <table>
+                    <thead>
+                        <tr>
+                            
+                            <th>Langages</th>
+                            
+                            <th>Concepts</th>
+                            
+                            <th>Backend</th>
+                            
+                            <th>Devops</th>
+                            
+                            <th>Testing</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            
+                            <td>
+                                <ul>
+                                    
+                                    
+                                    <li>Python</li>
+                                    
+                                    <li>Kotlin</li>
+                                    
+                                    <li>Java</li>
+                                    
+                                    <li>Javascript</li>
+                                    
+                                    <li>SQL</li>
+                                    
+                                </ul>
+                            </td>
+                            
+                            <td>
+                                <ul>
+                                    
+                                    
+                                    <li>Conception technique</li>
+                                    
+                                    <li>Refactoring & Modularisation</li>
+                                    
+                                    <li>Injection de dépendances.</li>
+                                    
+                                    <li>Microservices</li>
+                                    
+                                    <li>Migration de BDD</li>
+                                    
+                                </ul>
+                            </td>
+                            
+                            <td>
+                                <ul>
+                                    
+                                    
+                                    <li>Django REST framework</li>
+                                    
+                                    <li>Node.js / Express.js / Sequelize</li>
+                                    
+                                    <li>RabbitMQ</li>
+                                    
+                                    <li>OpenAPI</li>
+                                    
+                                    <li>MySQL / MariaDB</li>
+                                    
+                                </ul>
+                            </td>
+                            
+                            <td>
+                                <ul>
+                                    
+                                    
+                                    <li>Intégration continue</li>
+                                    
+                                    <li>Jenkins pipeline</li>
+                                    
+                                    <li>Github Actions</li>
+                                    
+                                    <li>Docker</li>
+                                    
+                                    <li>Ansible</li>
+                                    
+                                </ul>
+                            </td>
+                            
+                            <td>
+                                <ul>
+                                    
+                                    
+                                    <li>Unitaire / Intégration / End-to-end</li>
+                                    
+                                    <li>Couverture de code</li>
+                                    
+                                    <li>Sonar</li>
+                                    
+                                    <li>Pytest / Mocha / Junit</li>
+                                    
+                                    <li>Factoryboy / Monkeypatch / Mockito</li>
+                                    
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <section>
+                <header class="section-heading">Expériences</header>
+                
+                
+                <article class="experience">
+                    <header class="experience-header">
+                        <div>Genymobile, Lyon, France</div>
+                        <div>
+                            <span>mar 2022 - Aujourd'hui
+                                
+                            </span>
+                        </div>
+                    </header>
+                    <div>
+                        <div class="experience-title">Ingénieur Conception et Développements (Backend)</div>
+                        
+                        <div class="experience-company-description">
+                            Développement sur une plateforme SaaS, avec une architecture basée sur des microservices, qui propose des devices virtuels Android dans le cloud
+
+                        </div>
+                        
+                        <ul>
+
+                            
+                            
+                            <li>Développement de nouvelles fonctionnalités : endpoints et tâches pour la migration/importation de données.</li>
+                            
+                            <li>Assister l'équipe SRE dans l'investigation des problèmes de production.</li>
+                            
+                            <li>Conception technique, estimation et planification des epics des évolutions.</li>
+                            
+                            <li>Coordination avec l’équipe front-end pour la conception des endpoints REST.</li>
+                            
+                            <li>Optimisation des opérations SQL en s'appuyant sur l'ORM.</li>
+                            
+                            <li>Maintenance : corrections des anomalies et mises à jour des dépendances.</li>
+                            
+                            <li>Culture de documentation, test, et collaboration.</li>
+                            
+                            <li>Organisation : Équipe avec backend, front, QA, PO. Scrum : sprints de 3 semaines : daily, rétro, grooming, poker planning.
+</li>
+                            
+                        </ul>
+                        <footer class="experience-skills">Django REST framework (DRF), Python, Express (Node.js), AMQP (RabbitMQ), tests unitaires et E2E (pytest, Mocha), Swagger/OpenAPI/ReDoc, MariaDB/MySQL, GitHub, Jenkins, Kibana, gateway, GraphQL
+</footer>
+                    </div>
+                </article>
+                
+                
+                
+                <article class="experience">
+                    <header class="experience-header">
+                        <div>Libon, Paris, France</div>
+                        <div>
+                            <span>oct 2018 - fév 2022
+                                
+                                (3.4 ans)
+                                
+                            </span>
+                        </div>
+                    </header>
+                    <div>
+                        <div class="experience-title">Mobile Lead</div>
+                        
+                        <div class="experience-company-description">
+                            Suite de l'expérience précédente : toujours le projet Libon mais au sein de l'entreprise Libon.
+
+                        </div>
+                        
+                        <ul>
+
+                            
+                            
+                            <li>Développement des évolutions : intégration des nouveaux moyens de paiement (espèces via cartes à gratter ou qr code à scanner, carte bancaire via Stripe), refonte UI/UX, ajout de nouveaux produits à acheter.</li>
+                            
+                            <li>Customisation du SDK Braintree pour améliorer l'UX de la validation 3DS pour les achats par carte bancaire.</li>
+                            
+                            <li>Intégration de l'A/B testing pour le paiement par carte bancaire (fournisseurs Stripe vs Braintree).</li>
+                            
+                            <li>Migration du code legacy vers des standards récents : migration des écrans avec toute la logique dans l'activity vers MVVM, migration des tests Robolectric vers Espresso, migration des AsyncTask vers Kotlin coroutines.</li>
+                            
+                            <li>Modularisation du projet monolith à 60 modules, pour une meilleure organisation de la code base et l'élimination des dépendances cycliques.</li>
+                            
+                            <li>Mise en place des outils pour améliorer le développement des deux plateformes iOS et Android : génération des release notes sur GitHub, suivi de la couverture de code, suivi de l'évolution de la migration Objective-C vers Swift, jobs Jenkins pour synchroniser des strings de Lokalise, job Jenkins pour builder un fork de libphonenumber pour iOS.</li>
+                            
+                            <li>Organisation : 1 release par mois en moyenne, daily avec les équipes mobile, backend et support, PR (même avant l'intégration d'un deuxième développeur Android).
+</li>
+                            
+                        </ul>
+                        <footer class="experience-skills">Android Studio/Gradle, Kotlin, Coroutines, MVVM, Modularisation, Androidx/Jetpack, Android Architecture Components, Room, LiveData, Data Binding, Paging, Material, Google Play Billing, Firebase Crashlytics, Linphone, Libphonenumber, Json, Glide, Volley, Mapbox, Brainree, Sripe, Github, REST, Junit, Robolectric, Espresso, Mockito, Jenkins pipelines, Jacoco, Detekt, PR, Code Review
+</footer>
+                    </div>
+                </article>
+                
+                
+                
+                <article class="experience">
+                    <header class="experience-header">
+                        <div>Genymobile, Châtillon, France</div>
+                        <div>
+                            <span>aoû 2011 - sep 2018
+                                
+                                (7.2 ans)
+                                
+                            </span>
+                        </div>
+                    </header>
+                    <div>
+                        <div class="experience-title">Ingénieur Conception et Développements (Android)</div>
+                        
+                        <div class="experience-company-description">
+                            L’application Libon permet de passer des appels VoIPout vers + de 150 pays.
+                        </div>
+                        
+                        <ul>
+
+                            
+                            
+                            <li>Développement sur l'application Libon avec d'autres développeurs Android basés à 3 sites (Châtillon, Lannion, Roumanie).</li>
+                            
+                            <li>Intégration et customisation du SDK Linphone en C/C++ (NDK).</li>
+                            
+                            <li>Augmentation de la couverture de code de 20% à 85%.</li>
+                            
+                            <li>Modernisation de la code base avec la migration vers Kotlin, l'introduction des Google Architecture Components (LiveData, ViewModel, Room) et d'autres outils fournis par Google (ConstraintLayout, Data Binding, SMS Retriever).</li>
+                            
+                            <li>Intégration des outils d'intégration continue (CI) dans un Jenkins avec Docker : Pipeline, Sonar, Jacoco, déploiement vers HockeyApp et Nexus.</li>
+                            
+                            <li>Intégration des SDK Google Billing et Braintree pour les achats.</li>
+                            
+                            <li>Point de contact avec les fournisseurs des SDK tierce partie.</li>
+                            
+                            <li>Publication sur Google Play. Suivi des crashs sur Fabric/Firebase Crashlytics.</li>
+                            
+                            <li>Intégration de l'A/B testing avec Firebase Remote Config.</li>
+                            
+                            <li>Organisation : Feature et component teams, PR review, Scrum: sprint de 2-3 semaines, daily, rétro, démo.
+</li>
+                            
+                        </ul>
+                        <footer class="experience-skills">Android Studio/Gradle, Eclipse/Maven, Kotlin, Java, C, C++, Shell, Linphone, SIP, RTP, Libphonenumber, Json, Retrofit, RxJava, Firebase Remote Config, Firebase Cloud Messaging (FCM), Crashlytics, Smartling, MVP, REST, Robolectric, Mockito, Wiremock, Gitlab, Github, Jenkins, Jacoco, Sonar, Scrum, Pull Request, Code Review
+</footer>
+                    </div>
+                </article>
+                
+                
+                
+                <article class="experience">
+                    <header class="experience-header">
+                        <div>Ariba, Paris, France</div>
+                        <div>
+                            <span>oct 2006 - fév 2011
+                                
+                                (4.4 ans)
+                                
+                            </span>
+                        </div>
+                    </header>
+                    <div>
+                        <div class="experience-title">Senior Consultant</div>
+                        
+                        <div class="experience-company-description">
+                            Ariba fournit des applications et services B-to-B d’amélioration du processus d’achat.
+                        </div>
+                        
+                        <ul>
+
+                            
+                            
+                            <li>Customisation du logiciel Ariba pour des besoins du client.</li>
+                            
+                            <li>Lead d'une équipe de 2 autres développeurs.</li>
+                            
+                            <li>Clients: AXA, Alstom, BNPP, Société Générale, Decathlon, RTE, Sanofi-Aventis.</li>
+                            
+                            <li>Présence chez les clients ou depuis le bureau d'Ariba.
+</li>
+                            
+                        </ul>
+                        <footer class="experience-skills">Java, Weblogic, Eclipse, Oracle, Maven, Windows, Svn, Perforce</footer>
+                    </div>
+                </article>
+                
+                
+                
+                <article class="experience">
+                    <header class="experience-header">
+                        <div>ESR, Noisy-le-Grand, France</div>
+                        <div>
+                            <span>nov 2004 - sep 2006
+                                
+                                (1.9 ans)
+                                
+                            </span>
+                        </div>
+                    </header>
+                    <div>
+                        <div class="experience-title">Consultant</div>
+                        
+                        <div class="experience-company-description">
+                            Mission à la RATP
+                        </div>
+                        
+                        <ul>
+
+                            
+                            
+                            <li>Développement d'un logiciel de supervision d'équipements dans les stations et gares de la RATP</li>
+                            
+                        </ul>
+                        <footer class="experience-skills">C++, GCC, GDB, Makefile, Java, SNMP, Linux, CVS</footer>
+                    </div>
+                </article>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </section>
+            <section>
+                <header class="section-heading">Conférences</header>
+                <div class="conferences">
+                    
+                    
+                    <article class="conference">
+                        <div class="conference-title">Optimizing SQL Queries in Django and SQLAlchemy: Tackling the N+1 Problem with ORMs</div>
+                        <div class="conference-conference">PyCon France, Strasbourg, 2024</div>
+                    </article>
+                    
+                    
+                    
+                    <article class="conference">
+                        <div class="conference-title">One test suite to test them all, Instrumentation and Robolectric tests</div>
+                        <div class="conference-conference">AndroidMakers by droidcon, Paris, 2024</div>
+                    </article>
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </section>
+            <section>
+                <header class="section-heading">Publications</header>
+                
+                <article>
+                    <div class="publication-title"><a href="http://clef.isti.cnr.it/2004/working_notes/WorkingNotes2004/61.pdf">Toward Cross-Language and Cross-Media Image Retrieval</a>
+                    </div>
+                    
+                    <div class="publication-coauthors">
+                        Co-auteurs : Ahmed Id Oumohmed, Max Mignotte, Jian-Yun Nie
+                    </div>
+                    
+                    <div>15 septembre 2004, CLEF'04 (Cross-Language Evaluation Forum)</div>
+                </article>
+                
+                <article>
+                    <div class="publication-title"><a href="https://papyrus.bib.umontreal.ca/xmlui/bitstream/handle/1866/14552/Alvarez_Carmen_2004_memoire.pdf">Modèles de langue en recherche d’information</a>
+                    </div>
+                    
+                    <div>29 avril 2004, Université de Montréal</div>
+                </article>
+                
+                <article>
+                    <div class="publication-title"><a href="https://www.iro.umontreal.ca/~felipe/Papers/paper-taln-2004b.pdf">Mots composés dans les modèles de langue pour la recherche d’information</a>
+                    </div>
+                    
+                    <div class="publication-coauthors">
+                        Co-auteurs : Philippe Langlais, Jian-Yun Nie
+                    </div>
+                    
+                    <div>19 avril 2004, TALN 2004, Session Poster, Fès, 19–21 avril 2004</div>
+                </article>
+                
+            </section>
+            <section>
+                <header class="section-heading">Formation</header>
+                <div class="educations">
+                    
+                    
+                    <article class="education">
+                        <div class="education-degree">Maîtrise ès sciences, Informatique</div>
+                        <div class="education-institution">Université de Montréal</div>
+                        <div>Équivalent en France : Bac + 5/6</div>
+                    </article>
+                    
+                    
+                    
+                    <article class="education">
+                        <div class="education-degree">Bachelor of Science, Computer Science</div>
+                        <div class="education-institution">California State Polytechnic University-Pomona</div>
+                        <div>Équivalent en France : Bac + 4</div>
+                    </article>
+                    
+                    
+                    
+                    
+                </div>
+            </section>
+        </div>
+        <section>
+            <header class="section-heading">Principes</header>
+            <div class="principles">
+                
+                <div class="principle">Découpage en petites itérations gérables</div>
+                
+                <div class="principle">Releases fréquentes</div>
+                
+                <div class="principle">Mise à jour régulière des libs</div>
+                
+                <div class="principle">Suivre les recommandations archi</div>
+                
+                <div class="principle">Viser une bonne couverture de code</div>
+                
+                <div class="principle">Refactoring séparé des évolutions</div>
+                
+                <div class="principle">Bien documenter pour l'équipe et pour future moi</div>
+                
             </div>
         </section>
-    </div>
-</header>
-<main class="mdc-top-app-bar--fixed-adjust">
-    <div class="summary">Développeuse de logiciels avec une vaste expérience dans plusieurs écosystèmes technologiques, des applications Java aux applications Android en Kotlin et, plus récemment, dans le développement backend en Python et Node.js.</div>
-    <div class="content">
-        <div class="panel-sidebar">
-            <div class="mdc-card--outlined">
-                <div class="card-content">
-                    <div class="mdc-typography--headline6">Contact</div>
-                    <div class="key-attributes">
-                        
-                        <div class="key-attribute">
-                            <div class="key-attribute-icon"><img src="assets/mail.svg"
-                                                                 alt="Email"
-                                                                 title="Email"></div>
-                            <div class="key-attribute-text">carmen@rmen.ca</div>
-                        </div>
-                        
-                        <div class="key-attribute">
-                            <div class="key-attribute-icon"><img src="assets/github.png"
-                                                                 alt="Github"
-                                                                 title="Github"></div>
-                            <div class="key-attribute-text">caarmen</div>
-                        </div>
-                        
-                    </div>
-                    <div class="mdc-typography--headline6">Langues</div>
-                    <div class="key-attributes">
-                        
-                        <div class="key-attribute">
-                            <div class="key-attribute-icon">🇬🇧</div>
-                            <div class="key-attribute-text">English (native)</div>
-                        </div>
-                        
-                        <div class="key-attribute">
-                            <div class="key-attribute-icon">🇫🇷</div>
-                            <div class="key-attribute-text">Français (courant)</div>
-                        </div>
-                        
-                        <div class="key-attribute">
-                            <div class="key-attribute-icon">🇪🇸</div>
-                            <div class="key-attribute-text">Español (oxidado)</div>
-                        </div>
-                        
-                    </div>
-                    <div class="mdc-typography--headline6">Caractéristiques</div>
-                    
-                    <div class="key-attribute">
-                        <div class="key-attribute-icon"><i class="material-icons">check</i></div>
-                        <div class="key-attribute-text">Force de proposition</div>
-                    </div>
-                    
-                    <div class="key-attribute">
-                        <div class="key-attribute-icon"><i class="material-icons">check</i></div>
-                        <div class="key-attribute-text">Minutieuse</div>
-                    </div>
-                    
-                    <div class="key-attribute">
-                        <div class="key-attribute-icon"><i class="material-icons">check</i></div>
-                        <div class="key-attribute-text">Analytique</div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="mdc-card--outlined">
-                <div class="card-content principles">
-                    <div class="card-title mdc-typography--headline5">Principes</div>
-                    <ul class="mdc-list mdc-list--icon-list mdc-list--dense mdc-list--textual-list	">
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text">Découpage en petites itérations gérables</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text">Releases fréquentes</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text">Mise à jour régulière des libs</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text">Suivre les recommandations archi</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text">Viser une bonne couverture de code</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text">Refactoring séparé des évolutions</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text">Bien documenter pour l'équipe et pour future moi</span>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="panel-main">
-            <div class="mdc-card--outlined">
-                <div class="card-content principles">
-                    <div class="card-title mdc-typography--headline5"></div>
-                    <ul class="mdc-list mdc-list--icon-list mdc-list--dense mdc-list--textual-list	">
-                        
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text skill-category">Langages</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">Python, Kotlin, Java, Javascript, SQL, C/C++</span>
-                        </li>
-                        
-                        
-                        
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text skill-category">Général</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">Conception technique, refactoring, modularisation</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">Intégration continue, Jenkins pipeline, Github Actions</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">Git, GitHub, Pull Request review, Gitflow, trunk-based development</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">Tests unitaires, tests d'intégration, tests end-to-end, couverture de code, sonar</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">Programmation orientée objet, programmation fonctionnelle, scripts</span>
-                        </li>
-                        
-                        
-                        
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text skill-category">Backend</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">YAML, Swagger/OpenAPI, ReDoc, MySQL/MariaDB</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">Pytest, Mocha</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">Django REST framework, Node.js</span>
-                        </li>
-                        
-                        
-                        
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text skill-category">Android</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">MVVM, Room, LiveData, Data Binding, Paging, Material Design</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">Google Play Billing, Espresso, Robolectric, Mockito</span>
-                        </li>
-                        
-                        
-                        
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text skill-category">Projets perso/hobby</span>
-                        </li>
-                        
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__text">Spring boot, Qt, FastAPI, Swift, Vanilla JS/Electron, PWA</span>
-                        </li>
-                        
-                        
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="pagebreak"></div>
-    <div>
-        <div class="panel-title mdc-typography--headline4">Expériences</div>
-        
-        
-        <div class="experience mdc-card--outlined">
-            <div class="card-content">
-                
-                <div class="experience-company-logo">
-                    <img src="assets/genymobile.png"
-                         title="Genymobile"
-                         alt="Genymobile">
-                    
-                </div>
-                <div class="experience-title">Ingénieur Conception et Développements (Backend)</div>
-                
-                <div class="mdc-chip-set" role="grid">
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">calendar_today</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">mar 2022 - Aujourd'hui
-                                        
-                                        </span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">group</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">3 back, 2 front</span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <div class="mdc-chip__ripple"></div>
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">fmd_good</i>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">Lyon, France</span>
-                                    </span>
-                                </span>
-                    </div>
-                </div>
-                
-                <div class="experience-company-description">
-                    Développement sur une plateforme SaaS, avec une architecture basée sur des microservices, qui propose des devices virtuels Android dans le cloud
-
-                </div>
-                
-                <div class="experience-description mdc-typography--body1">Développement de nouvelles fonctionnalités : endpoints et tâches pour la migration/importation de données.
-
-Assister l'équipe SRE dans l'investigation des problèmes de production.
-
-Conception technique, estimation et planification des epics des évolutions.
-
-Coordination avec l’équipe front-end pour la conception des endpoints REST.
-
-Optimisation des opérations SQL en s'appuyant sur l'ORM.
-
-Maintenance : corrections des anomalies et mises à jour des dépendances.
-
-Culture de documentation, test, et collaboration.
-
-Organisation : Équipe avec backend, front, QA, PO. Scrum : sprints de 3 semaines : daily, rétro, grooming, poker planning.
-</div>
-                <div class="experience-skills">Django REST framework (DRF), Python, Express (Node.js), AMQP (RabbitMQ), tests unitaires et E2E (pytest, Mocha), Swagger/OpenAPI/ReDoc, MariaDB/MySQL, GitHub, Jenkins, Kibana, gateway, GraphQL
-
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="experience mdc-card--outlined">
-            <div class="card-content">
-                
-                <div class="experience-company-logo">
-                    <img src="assets/libon.png"
-                         title="Libon"
-                         alt="Libon">
-                    
-                </div>
-                <div class="experience-title">Mobile Lead</div>
-                
-                <div class="mdc-chip-set" role="grid">
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">calendar_today</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">oct 2018 - fév 2022
-                                        
-                                            (3.4 ans)
-                                        
-                                        </span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">group</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">1-2 Android, 1 iOS</span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <div class="mdc-chip__ripple"></div>
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">fmd_good</i>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">Paris, France</span>
-                                    </span>
-                                </span>
-                    </div>
-                </div>
-                
-                <div class="experience-company-description">
-                    Suite de l'expérience précédente : toujours le projet Libon mais au sein de l'entreprise Libon.
-
-                </div>
-                
-                <div class="experience-description mdc-typography--body1">Développement des évolutions : intégration des nouveaux moyens de paiement (espèces via cartes à gratter ou qr code à scanner, carte bancaire via Stripe), refonte UI/UX, ajout de nouveaux produits à acheter.
-
-Customisation du SDK Braintree pour améliorer l'UX de la validation 3DS pour les achats par carte bancaire.
-
-Intégration de l'A/B testing pour le paiement par carte bancaire (fournisseurs Stripe vs Braintree).
-
-Migration du code legacy vers des standards récents : migration des écrans avec toute la logique dans l'activity vers MVVM, migration des tests Robolectric vers Espresso, migration des AsyncTask vers Kotlin coroutines.
-
-Modularisation du projet monolith à 60 modules, pour une meilleure organisation de la code base et l'élimination des dépendances cycliques.
-
-Mise en place des outils pour améliorer le développement des deux plateformes iOS et Android : génération des release notes sur GitHub, suivi de la couverture de code, suivi de l'évolution de la migration Objective-C vers Swift, jobs Jenkins pour synchroniser des strings de Lokalise, job Jenkins pour builder un fork de libphonenumber pour iOS.
-
-Organisation : 1 release par mois en moyenne, daily avec les équipes mobile, backend et support, PR (même avant l'intégration d'un deuxième développeur Android).
-</div>
-                <div class="experience-skills">Android Studio/Gradle, Kotlin, Coroutines, MVVM, Modularisation, Androidx/Jetpack, Android Architecture Components, Room, LiveData, Data Binding, Paging, Material, Google Play Billing, Firebase Crashlytics, Linphone, Libphonenumber, Json, Glide, Volley, Mapbox, Brainree, Sripe, Github, REST, Junit, Robolectric, Espresso, Mockito, Jenkins pipelines, Jacoco, Detekt, PR, Code Review
-
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="experience mdc-card--outlined">
-            <div class="card-content">
-                
-                <div class="experience-company-logo">
-                    <img src="assets/genymobile.png"
-                         title="Genymobile"
-                         alt="Genymobile">
-                    
-                    <img src="assets/orange.png"
-                         title="Orange"
-                         alt="Orange">
-                    
-                </div>
-                <div class="experience-title">Ingénieur Conception et Développements (Android)</div>
-                
-                <div class="mdc-chip-set" role="grid">
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">calendar_today</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">aoû 2011 - sep 2018
-                                        
-                                            (7.2 ans)
-                                        
-                                        </span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">group</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">1-13 Android</span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <div class="mdc-chip__ripple"></div>
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">fmd_good</i>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">Châtillon, France</span>
-                                    </span>
-                                </span>
-                    </div>
-                </div>
-                
-                <div class="experience-company-description">
-                    L’application Libon permet de passer des appels VoIPout vers + de 150 pays.
-                </div>
-                
-                <div class="experience-description mdc-typography--body1">Développement sur l'application Libon avec d'autres développeurs Android basés à 3 sites (Châtillon, Lannion, Roumanie).
-
-Intégration et customisation du SDK Linphone en C/C++ (NDK).
-
-Augmentation de la couverture de code de 20% à 85%.
-
-Modernisation de la code base avec la migration vers Kotlin, l'introduction des Google Architecture Components (LiveData, ViewModel, Room) et d'autres outils fournis par Google (ConstraintLayout, Data Binding, SMS Retriever).
-
-Intégration des outils d'intégration continue (CI) dans un Jenkins avec Docker : Pipeline, Sonar, Jacoco, déploiement vers HockeyApp et Nexus.
-
-Intégration des SDK Google Billing et Braintree pour les achats.
-
-Point de contact avec les fournisseurs des SDK tierce partie.
-
-Publication sur Google Play. Suivi des crashs sur Fabric/Firebase Crashlytics.
-
-Intégration de l'A/B testing avec Firebase Remote Config.
-
-Organisation : Feature et component teams, PR review, Scrum: sprint de 2-3 semaines, daily, rétro, démo.
-</div>
-                <div class="experience-skills">Android Studio/Gradle, Eclipse/Maven, Kotlin, Java, C, C++, Shell, Linphone, SIP, RTP, Libphonenumber, Json, Retrofit, RxJava, Firebase Remote Config, Firebase Cloud Messaging (FCM), Crashlytics, Smartling, MVP, REST, Robolectric, Mockito, Wiremock, Gitlab, Github, Jenkins, Jacoco, Sonar, Scrum, Pull Request, Code Review
-
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="experience mdc-card--outlined">
-            <div class="card-content">
-                
-                <div class="experience-company-logo">
-                    <img src="assets/ariba.png"
-                         title="Ariba"
-                         alt="Ariba">
-                    
-                </div>
-                <div class="experience-title">Senior Consultant</div>
-                
-                <div class="mdc-chip-set" role="grid">
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">calendar_today</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">oct 2006 - fév 2011
-                                        
-                                            (4.4 ans)
-                                        
-                                        </span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">group</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">1-3 Devs</span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <div class="mdc-chip__ripple"></div>
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">fmd_good</i>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">Paris, France</span>
-                                    </span>
-                                </span>
-                    </div>
-                </div>
-                
-                <div class="experience-company-description">
-                    Ariba fournit des applications et services B-to-B d’amélioration du processus d’achat.
-                </div>
-                
-                <div class="experience-description mdc-typography--body1">Customisation du logiciel Ariba pour des besoins du client.
-
-Lead d'une équipe de 2 autres développeurs.
-
-Clients: AXA, Alstom, BNPP, Société Générale, Decathlon, RTE, Sanofi-Aventis.
-
-Présence chez les clients ou depuis le bureau d'Ariba.
-</div>
-                <div class="experience-skills">Java, Weblogic, Eclipse, Oracle, Maven, Windows, Svn, Perforce
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="experience mdc-card--outlined">
-            <div class="card-content">
-                
-                <div class="experience-company-logo">
-                    <img src="assets/esr.png"
-                         title="ESR"
-                         alt="ESR">
-                    
-                    <img src="assets/ratp.svg"
-                         title="RATP"
-                         alt="RATP">
-                    
-                </div>
-                <div class="experience-title">Consultant</div>
-                
-                <div class="mdc-chip-set" role="grid">
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">calendar_today</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">nov 2004 - sep 2006
-                                        
-                                            (1.9 ans)
-                                        
-                                        </span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">group</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">3 Devs</span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <div class="mdc-chip__ripple"></div>
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">fmd_good</i>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">Noisy-le-Grand, France</span>
-                                    </span>
-                                </span>
-                    </div>
-                </div>
-                
-                <div class="experience-company-description">
-                    Mission à la RATP
-                </div>
-                
-                <div class="experience-description mdc-typography--body1">Développement d'un logiciel de supervision d'équipements dans les stations et gares de la RATP</div>
-                <div class="experience-skills">C++, GCC, GDB, Makefile, Java, SNMP, Linux, CVS
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="experience mdc-card--outlined">
-            <div class="card-content">
-                
-                <div class="experience-company-logo">
-                    <img src="assets/micromuse.png"
-                         title="Micromuse"
-                         alt="Micromuse">
-                    
-                    <img src="assets/net_com.png"
-                         title="Network Equipment Technologies (Net.com)"
-                         alt="Network Equipment Technologies (Net.com)">
-                    
-                </div>
-                <div class="experience-title">Consultant</div>
-                
-                <div class="mdc-chip-set" role="grid">
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">calendar_today</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">jul 2003 - fév 2005
-                                        
-                                            (1.7 ans)
-                                        
-                                        </span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <div class="mdc-chip__ripple"></div>
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">fmd_good</i>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">Télétravail, Temps partiel</span>
-                                    </span>
-                                </span>
-                    </div>
-                </div>
-                
-                <div class="experience-description mdc-typography--body1">Customisation du logiciel Lumos, supervision des équipements réseau, pour les besoins de Net.com</div>
-                <div class="experience-skills">Java, JSP, Tomcat, SNMP, SQL, Ant, Windows
-
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="experience mdc-card--outlined">
-            <div class="card-content">
-                
-                <div class="experience-company-logo">
-                    <img src="assets/lumos.png"
-                         title="Lumos Technologies"
-                         alt="Lumos Technologies">
-                    
-                </div>
-                <div class="experience-title">Member of Technical Staff</div>
-                
-                <div class="mdc-chip-set" role="grid">
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">calendar_today</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">nov 2000 - déc 2002
-                                        
-                                            (2.2 ans)
-                                        
-                                        </span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">group</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">7 Devs</span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <div class="mdc-chip__ripple"></div>
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">fmd_good</i>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">Santa Monica, California</span>
-                                    </span>
-                                </span>
-                    </div>
-                </div>
-                
-                <div class="experience-description mdc-typography--body1">Développement sur un logiciel de supervision des équipements réseau</div>
-                <div class="experience-skills">Java, JSP, Tomcat, SNMP, SQL, Ant, Windows
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="experience mdc-card--outlined">
-            <div class="card-content">
-                
-                <div class="experience-company-logo">
-                    <img src="assets/homepage.png"
-                         title="Homepage.com"
-                         alt="Homepage.com">
-                    
-                </div>
-                <div class="experience-title">Client Integration Engineer</div>
-                
-                <div class="mdc-chip-set" role="grid">
-                    <div class="mdc-chip" role="row">
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">calendar_today</i>
-                        <div class="mdc-chip__ripple"></div>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="-1" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">mai 2000 - oct 2000
-                                        
-                                            (0.5 ans)
-                                        
-                                        </span>
-                                    </span>
-                                </span>
-                    </div>
-                    
-                    <div class="mdc-chip" role="row">
-                        <div class="mdc-chip__ripple"></div>
-                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">fmd_good</i>
-                        <span role="gridcell">
-                                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                                        <span class="mdc-chip__text">Los Angeles, California</span>
-                                    </span>
-                                </span>
-                    </div>
-                </div>
-                
-                <div class="experience-description mdc-typography--body1">Customisation du logiciel B-B de homepage.com pour les besoins des différents clients</div>
-                <div class="experience-skills">Perl, C, BSD, CVS
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        
-        
-        
-        <div class="panel-title mdc-typography--headline4">Publications</div>
-        <div class="mdc-card--outlined">
-            <div class="card-content">
-                <ul class="mdc-list mdc-list--icon-list mdc-list--two-line">
-                    
-                    <li class="mdc-list-item">
-                        <span class="mdc-list-item__ripple"></span>
-                        <div class="mdc-list-item__text">
-                            <div class="mdc-typography--headline6 publication-title"><a href="http://clef.isti.cnr.it/2004/working_notes/WorkingNotes2004/61.pdf">Toward Cross-Language and Cross-Media Image Retrieval</a>
-                            </div>
-                            
-                            <div class="publication-coauthors">
-                                Co-auteurs : Ahmed Id Oumohmed, Max Mignotte, Jian-Yun Nie
-                            </div>
-                            
-                            <div>15 septembre 2004, CLEF'04 (Cross-Language Evaluation Forum)</div>
-                        </div>
-                    </li>
-                    
-                    <li class="mdc-list-item">
-                        <span class="mdc-list-item__ripple"></span>
-                        <div class="mdc-list-item__text">
-                            <div class="mdc-typography--headline6 publication-title"><a href="https://papyrus.bib.umontreal.ca/xmlui/bitstream/handle/1866/14552/Alvarez_Carmen_2004_memoire.pdf">Modèles de langue en recherche d’information</a>
-                            </div>
-                            
-                            <div>29 avril 2004, Université de Montréal</div>
-                        </div>
-                    </li>
-                    
-                    <li class="mdc-list-item">
-                        <span class="mdc-list-item__ripple"></span>
-                        <div class="mdc-list-item__text">
-                            <div class="mdc-typography--headline6 publication-title"><a href="https://www.iro.umontreal.ca/~felipe/Papers/paper-taln-2004b.pdf">Mots composés dans les modèles de langue pour la recherche d’information</a>
-                            </div>
-                            
-                            <div class="publication-coauthors">
-                                Co-auteurs : Philippe Langlais, Jian-Yun Nie
-                            </div>
-                            
-                            <div>19 avril 2004, TALN 2004, Session Poster, Fès, 19–21 avril 2004</div>
-                        </div>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-        <div class="panel-title mdc-typography--headline4">Formation</div>
-        <div class="mdc-card--outlined">
-            <div class="card-content">
-                <ul class="mdc-list mdc-list--icon-list mdc-list--two-line">
-                    
-                    <li class="mdc-list-item">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__graphic"><img src="assets/udem.png" alt=""></span>
-                        <div class="mdc-list-item__text">
-                            <div class="mdc-typography--headline6 education-degree">Maîtrise ès sciences, Informatique</div>
-                            <div class="education-institution">Université de Montréal</div>
-                            <div class="education-french-equivalent">
-                                Équivalent en France : Bac + 5/6
-                            </div>
-                            <div class="">Janvier 2003 - Mai 2004</div>
-                        </div>
-                    </li>
-                    
-                    <li class="mdc-list-item">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__graphic"><img src="assets/cpp.png" alt=""></span>
-                        <div class="mdc-list-item__text">
-                            <div class="mdc-typography--headline6 education-degree">Bachelor of Science, Computer Science</div>
-                            <div class="education-institution">California State Polytechnic University-Pomona</div>
-                            <div class="education-french-equivalent">
-                                Équivalent en France : Bac + 4
-                            </div>
-                            <div class="">1998 - 2000</div>
-                        </div>
-                    </li>
-                    
-                    <li class="mdc-list-item">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__graphic"><img src="assets/cpp.png" alt=""></span>
-                        <div class="mdc-list-item__text">
-                            <div class="mdc-typography--headline6 education-degree">Bachelor of Science, Civil Engineering</div>
-                            <div class="education-institution">California State Polytechnic University-Pomona</div>
-                            <div class="education-french-equivalent">
-                                Équivalent en France : Bac + 4
-                            </div>
-                            <div class="">1994 - 1998</div>
-                        </div>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-</main>
+    </main>
 </body>
+
 </html>

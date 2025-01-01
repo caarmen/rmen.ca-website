@@ -1,13 +1,24 @@
+@media print {
+    @page {
+        size: A4 portrait;
+    }
+
+    :root:lang(fr) {
+        font-size: 0.91rem;
+    }
+
+    :root:lang(en) {
+        font-size: 0.95rem;
+    }
+}
+
+
 :root {
     --accent-color: #00796b;
     --surface-color: #f4f7f6;
     --table-border: #888;
     --title-font: Arial, sans-serif;
     --secondary-text-color: #888;
-}
-
-html {
-    width: 21cm;
 }
 
 a {
@@ -20,21 +31,45 @@ a:hover {
 }
 
 body {
-    margin: 0px;
     background-color: white;
     font-weight: 300;
+    width: 21cm;
+
+    @media screen {
+        margin: 16px auto;
+    }
+
+    @media print {
+        margin: 0px;
+    }
 }
 
-header {
+header.cv-header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: space-between;
+    align-items: flex-end;
     text-align: center;
     background-color: var(--surface-color);
     padding: 8px;
     font-family: var(--title-font);
 }
 
-header .contact div {
-    font-size: 0.9em;
+header.cv-header figure {
+    margin: 0px;
+}
+
+header.cv-header .contact div {
+    font-size: 0.9rem;
     color: var(--secondary-text-color);
+}
+
+.grid-item-start {
+    justify-self: start;
+}
+
+.grid-item-end {
+    justify-self: end;
 }
 
 table {
@@ -97,13 +132,6 @@ td ul li {
     margin-top: 8px;
 }
 
-.contact {
-    display: flex;
-    justify-content: space-between;
-    margin-top: -16px;
-    /* to align with role and location */
-}
-
 .educations {
     display: flex;
     justify-content: space-between;
@@ -138,12 +166,12 @@ td ul li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     color: var(--secondary-text-color);
 }
 
 .experience-skills {
-    font-size: 0.6em;
+    font-size: 0.6rem;
 }
 
 .principles {
