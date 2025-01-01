@@ -33,18 +33,11 @@ html {
 
 body {
 	background-color: #003;
-	background-image: url("images/background.png");
-	background-repeat: repeat-x;
 	margin-top: 30px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
-#moon {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-}
 
 .home {
 	font-size: 1.6em;
@@ -125,6 +118,22 @@ a:visited {
 	color: #DDDD00;
 	text-decoration: none;
 	font-weight: bold;
+}
+
+header {
+	position: relative;
+	background-image: url("images/background.png");
+	background-repeat: repeat-x;
+	background-size: contain;
+	padding: 32px 16px;
+}
+
+header::after {
+	content: url("images/moon.png");
+	position: absolute;
+	top: 15px;
+	right: 15px;
+
 }
 
 nav li {
