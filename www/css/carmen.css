@@ -34,10 +34,15 @@ html {
 */
 
 body {
-	background-color: var(--background-color);
+	background-color: var(--surface-color);
 	margin: 0px auto;
 }
 
+.global {
+	background-color: var(--background-color);
+	margin: 0px auto;
+	width: fit-content;
+}
 
 .home {
 	font-size: 1.6rem;
@@ -146,18 +151,18 @@ nav ul {
 	margin: 20px 0px;
 }
 
-.nav--multi-level > ul {
+.nav--multi-level>ul {
 	display: flex;
 	flex-direction: row;
 	gap: 64px;
 }
 
-.nav--multi-level > ul > li > a {
+.nav--multi-level>ul>li>a {
 	color: var(--link-text-color);
 	font-size: 1.3rem;
 }
 
-.nav--multi-level > ul > li > ul > li > a {
+.nav--multi-level>ul>li>ul>li>a {
 	color: var(--primary-text-color);
 }
 
