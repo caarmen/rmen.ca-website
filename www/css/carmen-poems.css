@@ -1,0 +1,32 @@
+@import url("theme.css");
+
+.poems, main nav, main footer {
+	margin: 0px auto;
+	width: fit-content;
+}
+body {
+	background-color: var(--surface-color);
+}
+.poems article {
+	white-space: pre-line;
+}
+.poems article:after, main nav::before, main nav::after {
+	display: block;
+	background: url('../images/divider.png');
+	content: " ";
+	height: 69px;
+	width: 377px;
+	margin-top: 32px;
+}
+.poems article header {
+	color: white;
+	font-weight: bold;
+}
+.poems article footer{
+	font-size: 0.8em;
+	color: var(--heading-text-color);
+	font-style: italic;
+}
+.copyright {
+	font-size: 0.6em;
+}

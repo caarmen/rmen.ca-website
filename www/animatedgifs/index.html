@@ -1,55 +1,122 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Carmen's Animated GIFs </title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="theme-color" content="#05055c">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="../carmen.css" />
-        <style>
-<!--
-.photo {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        padding: 10px;
-        background-color: #FFF;
-        -moz-box-shadow: 5px 5px 3px #333;
-        -webkit-box-shadow: 5px 5px 3px #333;
-        box-shadow: 5px 5px 3px #333;
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-        border-radius: 5px; /* future proofing */
-        
-}
--->
-        </style>
-    </head>
-    <body>
-        <div id="moon">
-            <img src="../images/moon.png" />
-        </div>
+
+<head>
+    <title>Carmen's Animated GIFs </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="manifest" href="../manifest.json" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/carmen.css" />
+    <style>
+        .global {
+            width: 100%;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 240px);
+            gap: 16px;
+            align-items: stretch;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        figure img {
+            max-width: 220px;
+            max-height: 200px;
+        }
+
+        figure {
+            padding: 16px;
+            width: 240px;
+            background-color: var(--surface-color);
+            border-radius: 5px;
+            display: flex;
+            gap: 8px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top-header">
         <a class="home" href="../index.html">&lt;&nbsp;&nbsp;Carmen Alvarez</a>
+    </header>
+    <div class="global">
+    <main>
         <h1>Carmen's Animated GIFs</h1>
-        <a href="shrug.gif"><img class="photo" src="shrug.gif"></a><br/>
-        <a href="sneeze.gif"><img class="photo" src="sneeze.gif"></a><br/>
-        <a href="omg.gif"><img class="photo" src="omg.gif"></a><br/>
-        <a href="quotes.gif"><img class="photo" src="quotes.gif"></a><br/>
-        <a href="button.gif"><img class="photo" src="button.gif"></a><br/>
-        <a href="lemon.gif"><img class="photo" src="lemon.gif"></a><br/>
-        <a href="coffee.gif"><img class="photo" src="coffee.gif"></a><br/>
-        <a href="wave.gif"><img class="photo" src="wave.gif"></a><br/>
-        <a href="bim.gif"><img class="photo" src="bim.gif"></a><br/>
-        <a href="noooo.gif"><img class="photo" src="noooo.gif"></a><br/>
-        <!--img class="photo" src="ferriswheel.gif"><br/-->
-        <a href="shakinghand.gif"><img class="photo" src="shakinghand.gif"></a><br/>
-        <a href="pushups.gif"><img class="photo" src="pushups.gif"></a><br/>
-        <a href="1976.gif"><img class="photo" src="1976.gif"></a><br/>
-        <a href="degage.gif"><img class="photo" src="degage.gif"></a><br/>
-        <a href="imwatchingyou.gif"><img class="photo" src="imwatchingyou.gif"></a><br/>
-        <a href="bee.gif"><img class="photo" src="bee.gif"></a><br/>
-        <!--a href="baguetteball.gif"><img class="photo" src="baguetteball.gif"></a><br/-->
-        <a href="highlanddancing.gif"><img class="photo" src="highlanddancing.gif"></a><br/>
-    </body>
+        <div class="gallery">
+            <figure>
+                <a href="shrug.gif"><img src="shrug.gif"></a>
+                <figcaption>Shrug</figcaption>
+            </figure>
+            <figure>
+                <a href="sneeze.gif"><img src="sneeze.gif"></a>
+                <figcaption>Sneeze</figcaption>
+            </figure>
+            <figure>
+                <a href="omg.gif"><img src="omg.gif"></a>
+                <figcaption>OMG</figcaption>
+            </figure>
+            <figure>
+                <a href="quotes.gif"><img src="quotes.gif"></a>
+                <figcaption>Air quotes</figcaption>
+            </figure>
+            <figure>
+                <a href="button.gif"><img src="button.gif"></a>
+                <figcaption>Red button</figcaption>
+            </figure>
+            <figure>
+                <a href="lemon.gif"><img src="lemon.gif"></a>
+                <figcaption>Lemon</figcaption>
+            </figure>
+            <figure>
+                <a href="coffee.gif"><img src="coffee.gif"></a>
+                <figcaption>Coffee</figcaption>
+            </figure>
+            <figure>
+                <a href="wave.gif"><img src="wave.gif"></a>
+                <figcaption>Wave</figcaption>
+            </figure>
+            <figure>
+                <a href="noooo.gif"><img src="noooo.gif"></a>
+                <figcaption>Noooo</figcaption>
+            </figure>
+            <!--figure><a href="ferriswheel.gif"><img src="ferriswheel.gif"></a>
+                <figcaption>Ferris wheel</figcaption>
+            </figure-->
+            <figure>
+                <a href="shakinghand.gif"><img src="shakinghand.gif"></a>
+                <figcaption>Trembling hand</figcaption>
+            </figure>
+            <figure>
+                <a href="pushups.gif"><img src="pushups.gif"></a>
+                <figcaption>Push-ups</figcaption>
+            </figure>
+            <figure>
+                <a href="1976.gif"><img src="1976.gif"></a>
+                <figcaption>1976</figcaption>
+            </figure>
+            <figure>
+                <a href="degage.gif"><img src="degage.gif"></a>
+                <figcaption>Degage</figcaption>
+            </figure>
+            <figure>
+                <a href="imwatchingyou.gif"><img src="imwatchingyou.gif"></a>
+                <figcaption>I'm watching you</figcaption>
+            </figure>
+            <figure>
+                <a href="bee.gif"><img src="bee.gif"></a>
+                <figcaption>Bee</figcaption>
+            </figure>
+            <figure>
+                <a href="highlanddancing.gif"><img src="highlanddancing.gif"></a>
+                <figcaption>Highland dancing</figcaption>
+            </figure>
+        </div>
+    </main>
+    </div>
+</body>
+
 </html>
