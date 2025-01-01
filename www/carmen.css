@@ -136,6 +136,10 @@ a:visited {
 
 }
 
+ul {
+	list-style-position: inside;
+}
+
 nav ul {
 	padding: 16px 0px;
 	list-style-type: none;
@@ -143,6 +147,16 @@ nav ul {
 
 .nav--main ul li {
 	margin: 20px 0px;
+}
+
+
+.nav--multi-level > ul > li > a {
+	color: #BB99BB;
+	font-size: 1.3rem;
+}
+
+.nav--multi-level > ul > li > ul > li > a {
+	color: #FFF;
 }
 
 #projects {
