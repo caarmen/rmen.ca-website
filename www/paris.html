@@ -1,70 +1,76 @@
 <html>
- <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
   <title>Parisians are mean</title>
   <style>
-  <!--
-   body {
-    background-color: black;
-    background-image: url('images/eiffeltower.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: contain;
-    -moz-background-size: contain;
-    -webkit-background-size: contain;
-    -o-background-size: contain;
+    <!--
+    body {
+      background-color: black;
+      background-image: url('images/eiffeltower.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: contain;
+      -moz-background-size: contain;
+      -webkit-background-size: contain;
+      -o-background-size: contain;
 
-   }
-   .mainText {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    top: 50%;
-    font-size: 4em;
-    text-shadow: 3px 5px 5px #888;
-    color: #bbf;
-   }
-   .headline {
-    color: #ddd;
-    font-style: italic;
-   }
-   .notice a {
-    position: absolute;
-    bottom:0%;
-    color: #444;
-    font-size: 0.6em;
-   }
-  -->
+    }
+
+    .mainText {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      top: 50%;
+      font-size: 4em;
+      text-shadow: 3px 5px 5px #888;
+      color: #bbf;
+    }
+
+    .headline {
+      color: #ddd;
+      font-style: italic;
+    }
+
+    .notice a {
+      position: absolute;
+      bottom: 0%;
+      color: #444;
+      font-size: 0.6em;
+    }
+    -->
   </style>
   <script language="javascript">
-   <!--
-   function updateText() {
-     var date1 = new Date(2014, 9,  14, 9, 15, 0, 0);
-     date1 =     new Date(2014, 10, 18, 21, 0, 0, 0);
-     date1 = date1.getTime();
-     var date2 = new Date().getTime();
-     var diff = date2 - date1;
-     var days = Math.floor(diff / (1000*24*60*60)); 
-     var hours = Math.floor((diff - (days*24*60*60*1000))/(1000*60*60));
-     var minutes = Math.floor((diff - (days*24*60*60*1000) - (hours*60*60*1000))/(1000*60));
-     var seconds = Math.floor((diff - (days*24*60*60*1000) - (hours*60*60*1000) - (minutes*1000*60))/(1000));
-     var result = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds";
-     var daysElem = document.getElementById("daysElem");
-     daysElem.innerHTML = result;
-   }
-   function doIt() {
-     updateText();
-     setTimeout(doIt, 1000);
-   }
-  -->
+    <!-
+    function updateText() {
+      var date1 = new Date(2014, 9,  14, 9, 15, 0, 0);
+      date1 =     new Date(2014, 10, 18, 21, 0, 0, 0);
+      date1 = date1.getTime();
+      var date2 = new Date().getTime();
+      var diff = date2 - date1;
+      var days = Math.floor(diff / (1000*24*60*60)); 
+      var hours = Math.floor((diff - (days*24*60*60*1000))/(1000*60*60));
+      var minutes = Math.floor((diff - (days*24*60*60*1000) - (hours*60*60*1000))/(1000*60));
+      var seconds = Math.floor((diff - (days*24*60*60*1000) - (hours*60*60*1000) - (minutes*1000*60))/(1000));
+      var result = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds";
+      var daysElem = document.getElementById("daysElem");
+      daysElem.innerHTML = result;
+    }
+    function doIt() {
+      updateText();
+      setTimeout(doIt, 1000);
+    }
+    ->
   </script>
- </head>
- <body onload="doIt();">
+</head>
+
+<body onload="doIt();">
   <a class="headline">Number of days since my last confrontation with an angry Parisian on the streets of Paris:</a>
   <div class="mainText">
-   <a id="daysElem"/>
+    <a id="daysElem" />
   </div>
   <div class="notice"><a href="https://openclipart.org/detail/7649/eiffel-tower-by-benbois">Eiffel tower picture by BenBois</a>
- </body>
+</body>
+
 </html>

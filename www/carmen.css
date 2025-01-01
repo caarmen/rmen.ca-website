@@ -39,13 +39,17 @@ body {
 }
 
 .home {
-	font-size:1.6em;
+	font-size: 1.6em;
 	color: #AFF;
 	font-variant: small-caps;
 	font-weight: bold;
 	text-shadow: 2px 2px #000000;
 }
-a.home:link,a.home.active:link, a.home:hover, a.home:visited {
+
+a.home:link,
+a.home.active:link,
+a.home:hover,
+a.home:visited {
 	color: #AFF;
 }
 
@@ -82,7 +86,8 @@ h4 {
 	box-shadow: 5px 5px 0px #888;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
-	border-radius: 10px; /* future proofing */
+	border-radius: 10px;
+	/* future proofing */
 }
 
 .icon:hover {
@@ -95,7 +100,8 @@ h4 {
 	box-shadow: 2px 2px 0px #888;
 }
 
-a:link,a.active:link {
+a:link,
+a.active:link {
 	color: #CCCC88;
 	text-decoration: none;
 	font-weight: bold;
@@ -113,6 +119,4 @@ a:visited {
 	font-weight: bold;
 }
 
-* {
-	
-}
+* {}
