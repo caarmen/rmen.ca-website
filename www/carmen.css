@@ -149,6 +149,11 @@ nav ul {
 	margin: 20px 0px;
 }
 
+.nav--multi-level > ul {
+	display: flex;
+	flex-direction: row;
+	gap: 64px;
+}
 
 .nav--multi-level > ul > li > a {
 	color: #BB99BB;
