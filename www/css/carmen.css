@@ -1,3 +1,5 @@
+@import url("theme.css");
+
 /* Remove/reset some browser css attribute values,
 so we can ensure the same layout on different browsers.  */
 * {
@@ -7,7 +9,7 @@ so we can ensure the same layout on different browsers.  */
 }
 
 html {
-	color: #FFF;
+	color: var(--primary-text-color);
 	font-family: 'Conv_CarmenMedium';
 	font-size: 22pt;
 }
@@ -32,28 +34,28 @@ html {
 */
 
 body {
-	background-color: #003;
+	background-color: var(--background-color);
 	margin: 0px auto;
 }
 
 
 .home {
 	font-size: 1.6rem;
-	color: #AFF;
+	color: var(--logo-text-color);
 	font-variant: small-caps;
 	font-weight: bold;
-	text-shadow: 2px 2px #000000;
+	text-shadow: 2px 2px var(--logo-shadow-color);
 }
 
 a.home:link,
 a.home.active:link,
 a.home:hover,
 a.home:visited {
-	color: #AFF;
+	color: var(--logo-text-color);
 }
 
 h1 {
-	color: #FF8;
+	color: var(--heading-text-color);
 	margin-bottom: 16px;
 }
 
@@ -62,18 +64,18 @@ h1 a:hover {
 }
 
 h2 {
-	color: #DDBBDD;
+	color: var(--heading-text-color);
 	font-size: 1.4rem;
 	margin-bottom: 16px;
 }
 
 h3 {
-	color: #BB99BB;
+	color: var(--heading-text-color);
 	font-size: 1.3rem;
 }
 
 h4 {
-	color: #997799;
+	color: var(--heading-text-color);
 	font-style: italic;
 	font-size: 1.2rem;
 }
@@ -82,9 +84,9 @@ h4 {
 	vertical-align: middle;
 	margin-right: 20px;
 	margin-bottom: 5px;
-	-moz-box-shadow: 5px 5px 0px #888;
-	-webkit-box-shadow: 5px 5px 0px #888;
-	box-shadow: 5px 5px 0px #888;
+	-moz-box-shadow: 5px 5px 0px var(--box-shadow-color);
+	-webkit-box-shadow: 5px 5px 0px var(--box-shadow-color);
+	box-shadow: 5px 5px 0px var(--box-shadow-color);
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
@@ -96,27 +98,22 @@ h4 {
 	margin-top: 3px;
 	margin-bottom: 2px;
 	margin-right: 17px;
-	-moz-box-shadow: 2px 2px 0px #888;
-	-webkit-box-shadow: 2px 2px 0px #888;
-	box-shadow: 2px 2px 0px #888;
+	-moz-box-shadow: 2px 2px 0px var(--box-shadow-color);
+	-webkit-box-shadow: 2px 2px 0px var(--box-shadow-color);
+	box-shadow: 2px 2px 0px var(--box-shadow-color);
 }
 
 a:link,
-a.active:link {
-	color: #CCCC88;
+a.active:link,
+a:visited {
+	color: var(--link-text-color);
 	text-decoration: none;
 	font-weight: bold;
 }
 
 a:hover {
-	color: #DDDD66;
+	color: var(--link-text-color);
 	text-decoration: underline;
-	font-weight: bold;
-}
-
-a:visited {
-	color: #DDDD00;
-	text-decoration: none;
 	font-weight: bold;
 }
 
@@ -156,12 +153,12 @@ nav ul {
 }
 
 .nav--multi-level > ul > li > a {
-	color: #BB99BB;
+	color: var(--link-text-color);
 	font-size: 1.3rem;
 }
 
 .nav--multi-level > ul > li > ul > li > a {
-	color: #FFF;
+	color: var(--primary-text-color);
 }
 
 #projects {

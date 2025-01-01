@@ -1,5 +1,7 @@
+@import url("theme.css");
+
 .global {
-	background-color: #003;
+	background-color: var(--background-color);
 	margin: 0px auto;
 	width: fit-content;
 }
@@ -8,7 +10,7 @@
 	width: fit-content;
 }
 body {
-	background-color: #222;
+	background-color: var(--surface-color);
 }
 .poems article {
 	white-space: pre-line;
@@ -27,7 +29,7 @@ body {
 }
 .poems article footer{
 	font-size: 0.8em;
-	color: #BB99BB;
+	color: var(--heading-text-color);
 	font-style: italic;
 }
 .copyright {
