@@ -119,4 +119,9 @@ a:visited {
 	font-weight: bold;
 }
 
+nav li {
+	list-style-type: none;
+	margin: 20px 0px;
+}
+
 * {}
