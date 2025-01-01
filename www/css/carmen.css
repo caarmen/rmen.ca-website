@@ -44,6 +44,10 @@ body {
 	width: fit-content;
 }
 
+.background {
+	background-color: var(--background-color);
+}
+
 .home {
 	font-size: 1.6rem;
 	color: var(--logo-text-color);
