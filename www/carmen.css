@@ -38,7 +38,7 @@ body {
 
 
 .home {
-	font-size: 1.6em;
+	font-size: 1.6rem;
 	color: #AFF;
 	font-variant: small-caps;
 	font-weight: bold;
@@ -63,19 +63,19 @@ h1 a:hover {
 
 h2 {
 	color: #DDBBDD;
-	font-size: 1.4em;
+	font-size: 1.4rem;
 	margin-bottom: 16px;
 }
 
 h3 {
 	color: #BB99BB;
-	font-size: 1.3em;
+	font-size: 1.3rem;
 }
 
 h4 {
 	color: #997799;
 	font-style: italic;
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .icon {
